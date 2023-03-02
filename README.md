@@ -1,1 +1,2 @@
-# CS673A1_Five_Guys
+# CS673_TeamProject
+CS673_TeamProject

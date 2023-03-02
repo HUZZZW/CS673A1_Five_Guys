@@ -1,0 +1,30 @@
+/*
+  Style Regulation Table
+*/
+$min-width:1226px;  // Container zoon width
+
+// Regular font size
+$fontA:       80px; // Product page big title
+$fontB:       38px; // Product page small title
+$fontC:       28px; // Navigation title
+$fontD:       26px; // Product page sub title
+$fontE:       24px; 
+$fontF:       22px;
+$fontG:       20px; // use for important button
+$fontH:       18px; // most content
+$fontI:       16px; // support content
+$fontJ:       14px; // general content
+$fontK:       12px; // system defualt
+
+// rugular color sets
+$colorA:      #00ccff !default; // highlight and emphasize
+$colorB:      #333333 !default; // important content
+$colorC:      #666666 !default; // normal
+$colorD:      #999999 !default; // outline
+$colorE:      #cccccc !default;
+$colorF:      #d7d7d7 !default; // split lines
+$colorG:      #ffffff !default; // light content
+$colorH:      #e5e5e5 !default; // split lines 2
+$colorI:      #000000 !default; // dark background
+$colorJ:      #F5F5F5 !default; // light background 2
+$colorK:      #FFFAF7 !default; // light background 3

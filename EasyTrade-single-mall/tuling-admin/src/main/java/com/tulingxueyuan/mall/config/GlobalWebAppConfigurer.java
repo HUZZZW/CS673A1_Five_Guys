@@ -1,0 +1,30 @@
+package com.tulingxueyuan.mall.config;
+
+import com.tulingxueyuan.mall.interceptor.AuthInterceptor;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+/**
+ * Permission validation interceptor
+ */
+@Configuration
+public class GlobalWebAppConfigurer implements WebMvcConfigurer {
+
+    /**
+     * The interceptor is primarily for permission verification
+     * @param registry
+     */
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(authInterceptor()).addPathPatterns("/**");
+    }
+
+    @Bean
+    @ConfigurationProperties(prefix = "secure.ignored")
+    public AuthInterceptor authInterceptor(){
+        return new AuthInterceptor();
+    }
+}
