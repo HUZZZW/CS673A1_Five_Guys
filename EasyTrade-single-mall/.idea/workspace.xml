@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0855a341-0206-48ba-b1d0-dbea93b94cba" name="Default Changelist" comment="" />
+    <list default="true" id="0855a341-0206-48ba-b1d0-dbea93b94cba" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,6 +77,9 @@
       <replace />
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -139,7 +144,7 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="C:\repmvn" />
-        <option name="mavenHome" value="$PROJECT_DIR$/../../../../Program Files/apache-maven-3.9.0" />
+        <option name="mavenHome" value="$USER_HOME$/Program Files/apache-maven-3.9.0" />
         <option name="userSettingsFile" value="C:\Program Files\apache-maven-3.9.0\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -277,7 +282,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "C:/Users/ASUS/Desktop/ezt_final_version/tuling-single-mall",
+    "last_opened_file_path": "C:/Users/eamon/Desktop/CS 673/CS673A1_Five_Guys/EasyTrade-single-mall",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -287,7 +292,7 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
-    "spring.configuration.checksum": "d234c0ad106d57a4477d26f8fe887707",
+    "spring.configuration.checksum": "c5a5b6b871e2e788685114a464661abc",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -503,6 +508,7 @@
       <workItem from="1683086111396" duration="17000" />
       <workItem from="1683086158175" duration="132000" />
       <workItem from="1683086296284" duration="267000" />
+      <workItem from="1683141595509" duration="1333000" />
     </task>
     <servers />
   </component>
