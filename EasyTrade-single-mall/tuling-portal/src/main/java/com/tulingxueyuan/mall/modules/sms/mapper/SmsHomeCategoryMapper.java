@@ -8,10 +8,11 @@ import java.util.List;
 
 /**
  * <p>
- *
- * Mapper interface
+ *  Mapper 接口
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-26
  */
 public interface SmsHomeCategoryMapper extends BaseMapper<SmsHomeCategory> {
     List<HomeGoodsSaleDTO> getHomeCategoryWithProduct();

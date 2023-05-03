@@ -18,8 +18,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- *
- * Background user cache management Service implementation class
+ * 后台用户缓存管理Service实现类
+ * Created by macro on 2020/3/13.
  */
 @Service
 public class UmsMemberCacheServiceImpl implements UmsMemberCacheService {

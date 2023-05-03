@@ -12,9 +12,11 @@ import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- * Homepage carousel advertisement table
+ * 首页轮播广告表
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-26
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

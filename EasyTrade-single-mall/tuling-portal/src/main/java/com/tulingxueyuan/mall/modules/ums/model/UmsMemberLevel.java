@@ -13,10 +13,11 @@ import java.math.BigDecimal;
 
 /**
  * <p>
- *
- * Membership Level Table
+ * 会员等级表
  * </p>
  *
+ * @author XuShu
+ * @since 2023-03-05
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

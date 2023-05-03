@@ -43,6 +43,7 @@ public class CartController {
     }
 
     /**
+     * 初始化状态栏的购物车商品数量
      * this.axios.get('/cart/products/sum')
      */
     @RequestMapping(value = "/products/sum", method = RequestMethod.GET)
@@ -52,6 +53,7 @@ public class CartController {
     }
 
     /**
+     * 获取购物数据
      * this.axios.get('/cart/list')
      */
     @RequestMapping(value = "/list", method = RequestMethod.GET)
@@ -61,6 +63,7 @@ public class CartController {
     }
 
     /**
+     * 更新商品的数量
      * this.axios.post('/cart/update/quantity',Qs.stringify({
      *             id:item.id,
      *             quantity:item.quantity
@@ -82,6 +85,7 @@ public class CartController {
     }
 
     /**
+     *  删除
      *  this.axios.post('/cart/delete',Qs.stringify({
      *      ids:item.id
      *  }),{headers: {'Content-Type': 'application/x-www-form-urlencoded'}})

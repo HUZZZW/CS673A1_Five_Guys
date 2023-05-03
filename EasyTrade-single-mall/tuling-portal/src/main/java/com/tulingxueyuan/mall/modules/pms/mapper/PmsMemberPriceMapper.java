@@ -5,9 +5,11 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
  * <p>
- * Commodity membership price list Mapper interface
+ * 商品会员价格表 Mapper 接口
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 public interface PmsMemberPriceMapper extends BaseMapper<PmsMemberPrice> {
 

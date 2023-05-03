@@ -5,9 +5,11 @@ import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
- * Shipping Template Service Class
+ * 运费模版 服务类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 public interface PmsFeightTemplateService extends IService<PmsFeightTemplate> {
 

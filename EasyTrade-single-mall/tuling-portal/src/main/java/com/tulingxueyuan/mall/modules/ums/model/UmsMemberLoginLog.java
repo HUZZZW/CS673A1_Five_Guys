@@ -13,10 +13,11 @@ import java.util.Date;
 
 /**
  * <p>
- *
- * Member login record
+ * 会员登录记录
  * </p>
  *
+ * @author XuShu
+ * @since 2023-03-05
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

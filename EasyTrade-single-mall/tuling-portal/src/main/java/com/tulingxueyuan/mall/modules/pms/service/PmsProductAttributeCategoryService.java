@@ -5,10 +5,11 @@ import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
- *
- * Product attribute classification table Service category
+ * 产品属性分类表 服务类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 public interface PmsProductAttributeCategoryService extends IService<PmsProductAttributeCategory> {
 

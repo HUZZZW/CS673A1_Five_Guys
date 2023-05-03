@@ -12,10 +12,11 @@ import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- *
- * sku inventory
+ * sku的库存
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

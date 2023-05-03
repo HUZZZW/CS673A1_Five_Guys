@@ -20,7 +20,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
- * Verify whether the user is logged in, menu resource permissions
+ * 作用： 验证 用户是否登录、菜单资源权限
+ * 作者：徐庶
  */
 public class AuthInterceptor extends HandlerInterceptorAdapter {
 
@@ -39,23 +40,23 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
-        //Paths that can be accessed without logging in - whitelist
-        // Get the current request   /Member/login
+        //1、不需要登录就可以访问的路径——白名单
+        // 获取当前请求   /Member/login
         String requestURI = request.getRequestURI();
-        //Ant way path matching /**  ？  _
+        // Ant方式路径匹配 /**  ？  _
         PathMatcher matcher = new AntPathMatcher();
         for (String ignoredUrl : urls) {
             if(matcher.match(ignoredUrl,requestURI)){
                 return  true;
-                //If it is a white list, it means that you can access it without logging in
+                // 如果是白名单，就说明不需要登录也能访问
             }
         }
 
 
-        // get jwt
+        // 拿到jwt
         String jwt = request.getHeader(tokenHeader);
-        //judge whether there is
-        //Determine whether tokenHead is added at the beginning
+        // 判断是否存在
+        // 判断开头是否加了  tokenHead
         if (StrUtil.isBlank(jwt)) {
             System.out.println("AuthInterceptor.preHandle: StrUtil.isBlank(jwt)");
             throw new ApiException(ResultCode.UNAUTHORIZED);
@@ -64,14 +65,14 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
             System.out.println("AuthInterceptor.preHandle: !jwt.startsWith(tokenHead)");
             throw new ApiException(ResultCode.UNAUTHORIZED);
         }
-        //decrypt
+        // 解密
         jwt = jwt.substring(tokenHead.length());
         String userName = jwtTokenUtil.getUserNameFromToken(jwt);
         if (StrUtil.isBlank(userName)) {
             System.out.println("AuthInterceptor.preHandle: StrUtil.isBlank(userName)");
             throw new ApiException(ResultCode.UNAUTHORIZED);
         }
-        //query from the server
+        // 从服务器中查询
         UmsMember umsMember = umsMemberService.getMemberByUsername(userName);
         if (umsMember == null) {
             System.out.println("AuthInterceptor.preHandle: umsMember == null");

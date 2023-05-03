@@ -5,10 +5,11 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
  * <p>
- *
- * Membership table Mapper interface
+ * 会员表 Mapper 接口
  * </p>
  *
+ * @author XuShu
+ * @since 2023-03-05
  */
 public interface UmsMemberMapper extends BaseMapper<UmsMember> {
 

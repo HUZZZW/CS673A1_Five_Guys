@@ -5,10 +5,11 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
  * <p>
- *
- * Table Mapper interface for storing product parameter information
+ * 存储产品参数信息的表 Mapper 接口
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 public interface PmsProductAttributeValueMapper extends BaseMapper<PmsProductAttributeValue> {
 

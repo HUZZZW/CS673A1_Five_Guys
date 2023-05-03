@@ -5,9 +5,11 @@ import com.tulingxueyuan.mall.modules.ums.model.UmsMemberLoginLog;
 
 /**
  * <p>
- * Member login record Mapper interface
+ * 会员登录记录 Mapper 接口
  * </p>
  *
+ * @author XuShu
+ * @since 2023-03-05
  */
 public interface UmsMemberLoginLogMapper extends BaseMapper<UmsMemberLoginLog> {
 

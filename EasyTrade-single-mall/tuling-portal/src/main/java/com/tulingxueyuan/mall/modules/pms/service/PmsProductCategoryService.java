@@ -8,8 +8,7 @@ import java.util.List;
 
 /**
  * <p>
- *
- * Product Category Service
+ * 产品分类 服务类
  * </p>
  *
  */

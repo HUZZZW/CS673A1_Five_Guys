@@ -8,10 +8,11 @@ import org.springframework.stereotype.Service;
 
 /**
  * <p>
- *
- * Product attribute classification table Service implementation class
+ * 产品属性分类表 服务实现类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 @Service
 public class PmsProductAttributeCategoryServiceImpl extends ServiceImpl<PmsProductAttributeCategoryMapper, PmsProductAttributeCategory> implements PmsProductAttributeCategoryService {

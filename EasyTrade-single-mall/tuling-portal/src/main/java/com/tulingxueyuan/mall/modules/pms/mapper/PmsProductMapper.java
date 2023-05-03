@@ -6,10 +6,11 @@ import com.tulingxueyuan.mall.dto.ProductDetailDTO;
 
 /**
  * <p>
- *
- * Commodity information Mapper interface
+ * 商品信息 Mapper 接口
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 public interface PmsProductMapper extends BaseMapper<PmsProduct> {
 

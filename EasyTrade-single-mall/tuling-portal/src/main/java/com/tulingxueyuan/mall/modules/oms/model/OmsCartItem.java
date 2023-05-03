@@ -15,10 +15,11 @@ import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- *
- * shopping cart table
+ * 购物车表
  * </p>
  *
+ * @author XuShu
+ * @since 2023-03-06
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

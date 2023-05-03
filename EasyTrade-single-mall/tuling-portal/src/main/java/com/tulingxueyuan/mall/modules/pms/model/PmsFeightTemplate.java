@@ -12,10 +12,11 @@ import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- *
- * shipping template
+ * 运费模版
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

@@ -9,15 +9,13 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
- *
- * Authorization verification interceptor
+ * 权限验证拦截器
  */
 @Configuration
 public class GlobalWebAppConfigurer implements WebMvcConfigurer {
 
     /**
-     *
-     * The interceptor is mainly for permission verification
+     * 该拦截器主要是为了权限验证
      * @param registry
      */
     @Override
@@ -26,7 +24,7 @@ public class GlobalWebAppConfigurer implements WebMvcConfigurer {
     }
 
     /**
-     * User Authentication Interceptor
+     * 用户验证拦截器
      * @return
      */
     @Bean
@@ -36,8 +34,7 @@ public class GlobalWebAppConfigurer implements WebMvcConfigurer {
     }
 
     /**
-     *
-     * jwt tool class
+     * jwt 工具类
      * @return
      */
     @Bean

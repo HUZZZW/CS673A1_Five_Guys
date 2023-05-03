@@ -12,9 +12,11 @@ import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- * Commodity audit record
+ * 商品审核记录
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

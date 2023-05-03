@@ -5,10 +5,11 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
  * <p>
- *
- * Order setting table Mapper interface
+ * 订单设置表 Mapper 接口
  * </p>
  *
+ * @author XuShu
+ * @since 2023-03-12
  */
 public interface OmsOrderSettingMapper extends BaseMapper<OmsOrderSetting> {
 

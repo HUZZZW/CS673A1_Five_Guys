@@ -5,10 +5,11 @@ import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
- *
- * Album Picture Sheet Service
+ * 画册图片表 服务类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 public interface PmsAlbumPicService extends IService<PmsAlbumPic> {
 

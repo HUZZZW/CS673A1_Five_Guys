@@ -5,10 +5,11 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
  * <p>
- *
- * Product Review Reply Form Mapper Interface
+ * 产品评价回复表 Mapper 接口
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 public interface PmsCommentReplayMapper extends BaseMapper<PmsCommentReplay> {
 

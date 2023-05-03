@@ -8,10 +8,11 @@ import org.springframework.stereotype.Service;
 
 /**
  * <p>
- *
- * Brand Table Service Implementation Class
+ * 品牌表 服务实现类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 @Service
 public class PmsBrandServiceImpl extends ServiceImpl<PmsBrandMapper, PmsBrand> implements PmsBrandService {

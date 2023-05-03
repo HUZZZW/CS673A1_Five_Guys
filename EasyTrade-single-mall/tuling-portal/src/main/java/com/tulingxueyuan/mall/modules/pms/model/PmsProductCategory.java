@@ -11,9 +11,11 @@ import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- * Product Categories
+ * 产品分类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

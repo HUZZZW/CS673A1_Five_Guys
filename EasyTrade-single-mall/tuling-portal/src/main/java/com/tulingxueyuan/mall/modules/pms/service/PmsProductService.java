@@ -7,17 +7,17 @@ import com.tulingxueyuan.mall.dto.ProductDetailDTO;
 
 /**
  * <p>
- *
- * Commodity Information Service
+ * 商品信息 服务类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 public interface PmsProductService extends IService<PmsProduct> {
 
     /**
-     *
-     * Get product details
-     * @param id productid
+     * 获取商品的详情
+     * @param id 商品id
      * @return
      */
 

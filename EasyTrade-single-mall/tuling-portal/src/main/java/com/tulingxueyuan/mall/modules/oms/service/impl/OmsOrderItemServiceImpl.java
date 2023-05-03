@@ -8,10 +8,11 @@ import org.springframework.stereotype.Service;
 
 /**
  * <p>
- *
- * Commodity service implementation class included in the order
+ * 订单中所包含的商品 服务实现类
  * </p>
  *
+ * @author XuShu
+ * @since 2021-03-21
  */
 @Service
 public class OmsOrderItemServiceImpl extends ServiceImpl<OmsOrderItemMapper, OmsOrderItem> implements OmsOrderItemService {

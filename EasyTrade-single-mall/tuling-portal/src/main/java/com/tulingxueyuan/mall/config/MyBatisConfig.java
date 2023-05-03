@@ -8,8 +8,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
- *
- * MyBatis configuration class
+ * MyBatis配置类
+ * Created by macro on 2019/4/8.
  */
 @Configuration
 @EnableTransactionManagement

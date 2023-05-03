@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 
 /**
  * <p>
- *
- * Member login record
+ * 会员登录记录 服务实现类
  * </p>
  *
-
+ * @author XuShu
+ * @since 2023-03-05
  */
 @Service
 public class UmsMemberLoginLogServiceImpl extends ServiceImpl<UmsMemberLoginLogMapper, UmsMemberLoginLog> implements UmsMemberLoginLogService {

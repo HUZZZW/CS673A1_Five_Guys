@@ -5,10 +5,11 @@ import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
- *
- * Product full discount table (only for the same product) service category
+ * 产品满减表(只针对同商品) 服务类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 public interface PmsProductFullReductionService extends IService<PmsProductFullReduction> {
 

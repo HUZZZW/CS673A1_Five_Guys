@@ -11,10 +11,11 @@ import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- *
- * A table that stores product parameter information
+ * 存储产品参数信息的表
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

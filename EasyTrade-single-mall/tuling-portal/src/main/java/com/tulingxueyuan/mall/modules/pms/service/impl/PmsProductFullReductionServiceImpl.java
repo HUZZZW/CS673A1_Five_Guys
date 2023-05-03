@@ -8,10 +8,11 @@ import org.springframework.stereotype.Service;
 
 /**
  * <p>
- *
- * Product full reduction table (only for the same product) service realization class
+ * 产品满减表(只针对同商品) 服务实现类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 @Service
 public class PmsProductFullReductionServiceImpl extends ServiceImpl<PmsProductFullReductionMapper, PmsProductFullReduction> implements PmsProductFullReductionService {

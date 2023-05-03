@@ -336,7 +336,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.StartApp">
+  <component name="RunManager" selected="Spring Boot.TulingPortalApplication (1)">
     <configuration name="MyBatisPlusGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.tulingxueyuan.mall.generator.MyBatisPlusGenerator" />
       <module name="tuling-mpbg" />
@@ -499,6 +499,10 @@
       <workItem from="1683080624585" duration="2000" />
       <workItem from="1683080948331" duration="132000" />
       <workItem from="1683081086609" duration="1418000" />
+      <workItem from="1683082716814" duration="1540000" />
+      <workItem from="1683086111396" duration="17000" />
+      <workItem from="1683086158175" duration="132000" />
+      <workItem from="1683086296284" duration="267000" />
     </task>
     <servers />
   </component>

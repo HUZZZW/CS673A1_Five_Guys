@@ -12,10 +12,11 @@ import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- *
- * Product full discount table (only for the same product)
+ * 产品满减表(只针对同商品)
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

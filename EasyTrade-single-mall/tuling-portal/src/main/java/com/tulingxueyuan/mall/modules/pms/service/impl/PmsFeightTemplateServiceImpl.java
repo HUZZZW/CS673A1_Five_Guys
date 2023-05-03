@@ -8,10 +8,11 @@ import org.springframework.stereotype.Service;
 
 /**
  * <p>
- *
- * Shipping Template Service Implementation Class
+ * 运费模版 服务实现类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 @Service
 public class PmsFeightTemplateServiceImpl extends ServiceImpl<PmsFeightTemplateMapper, PmsFeightTemplate> implements PmsFeightTemplateService {

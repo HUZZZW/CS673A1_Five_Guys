@@ -10,10 +10,11 @@ import org.springframework.stereotype.Service;
 
 /**
  * <p>
- *
- * Commodity Information Service Implementation Class
+ * 商品信息 服务实现类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 @Service
 public class PmsProductServiceImpl extends ServiceImpl<PmsProductMapper, PmsProduct> implements PmsProductService {
@@ -22,9 +23,8 @@ public class PmsProductServiceImpl extends ServiceImpl<PmsProductMapper, PmsProd
     PmsProductMapper productMapper;
 
     /**
-     *
-     * Get product details
-     * @param id productid
+     * 获取商品的详情
+     * @param id 商品id
      * @return
      */
 

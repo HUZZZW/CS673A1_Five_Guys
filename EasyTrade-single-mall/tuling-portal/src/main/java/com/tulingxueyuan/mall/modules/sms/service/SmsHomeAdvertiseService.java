@@ -7,10 +7,11 @@ import java.util.List;
 
 /**
  * <p>
- *
- * Home Carousel Ad Table Service
+ * 首页轮播广告表 服务类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-26
  */
 public interface SmsHomeAdvertiseService extends IService<SmsHomeAdvertise> {
 

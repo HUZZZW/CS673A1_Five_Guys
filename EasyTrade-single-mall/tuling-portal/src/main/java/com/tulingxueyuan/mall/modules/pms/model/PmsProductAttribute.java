@@ -11,10 +11,11 @@ import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- *
- * Commodity attribute parameter table
+ * 商品属性参数表
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

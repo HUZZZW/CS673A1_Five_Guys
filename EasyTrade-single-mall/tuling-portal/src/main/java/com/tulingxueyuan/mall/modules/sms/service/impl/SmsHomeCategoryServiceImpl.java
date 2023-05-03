@@ -12,10 +12,11 @@ import java.util.List;
 
 /**
  * <p>
- *
- * service implementation class
+ *  服务实现类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-26
  */
 @Service
 public class SmsHomeCategoryServiceImpl extends ServiceImpl<SmsHomeCategoryMapper, SmsHomeCategory> implements SmsHomeCategoryService {

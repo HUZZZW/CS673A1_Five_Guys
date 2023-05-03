@@ -12,10 +12,11 @@ import java.util.List;
 
 /**
  * <p>
- *
- * Product classification Service realization class
+ * 产品分类 服务实现类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 @Service
 public class PmsProductCategoryServiceImpl extends ServiceImpl<PmsProductCategoryMapper, PmsProductCategory> implements PmsProductCategoryService {

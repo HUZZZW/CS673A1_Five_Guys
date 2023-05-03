@@ -5,10 +5,11 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
  * <p>
- *
- * Product full reduction table (only for the same product) Mapper interface
+ * 产品满减表(只针对同商品) Mapper 接口
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 public interface PmsProductFullReductionMapper extends BaseMapper<PmsProductFullReduction> {
 

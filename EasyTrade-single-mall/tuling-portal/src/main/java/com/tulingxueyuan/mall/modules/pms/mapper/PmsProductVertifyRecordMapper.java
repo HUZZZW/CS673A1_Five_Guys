@@ -5,10 +5,11 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
  * <p>
- *
- * Commodity audit record Mapper interface
+ * 商品审核记录 Mapper 接口
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 public interface PmsProductVertifyRecordMapper extends BaseMapper<PmsProductVertifyRecord> {
 

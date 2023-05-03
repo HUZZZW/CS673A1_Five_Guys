@@ -8,10 +8,11 @@ import org.springframework.stereotype.Service;
 
 /**
  * <p>
- *
- * Membership Level Table
+ * 会员等级表 服务实现类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-03-05
  */
 @Service
 public class UmsMemberLevelServiceImpl extends ServiceImpl<UmsMemberLevelMapper, UmsMemberLevel> implements UmsMemberLevelService {

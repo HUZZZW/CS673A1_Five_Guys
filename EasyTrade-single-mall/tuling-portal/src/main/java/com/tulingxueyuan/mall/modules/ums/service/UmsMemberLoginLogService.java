@@ -5,10 +5,11 @@ import com.tulingxueyuan.mall.modules.ums.model.UmsMemberLoginLog;
 
 /**
  * <p>
- *
- * Member login record
+ * 会员登录记录 服务类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-03-05
  */
 public interface UmsMemberLoginLogService extends IService<UmsMemberLoginLog> {
 

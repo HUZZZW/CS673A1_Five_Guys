@@ -5,10 +5,11 @@ import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
- *
- * Table for storing product parameter information Service class
+ * 存储产品参数信息的表 服务类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 public interface PmsProductAttributeValueService extends IService<PmsProductAttributeValue> {
 

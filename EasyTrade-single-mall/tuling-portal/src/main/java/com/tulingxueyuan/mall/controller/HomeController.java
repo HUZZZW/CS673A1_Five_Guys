@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
-* Home Controller
+* 首页控制器
 * */
 
 @RestController
@@ -33,6 +33,7 @@ public class HomeController {
     SmsHomeCategoryService homeCategoryService;
 
     /**
+     * 获取首页类型导航栏和横幅的组合数据
      * get("/home/menus_banner")
      */
     @RequestMapping(value = "/menus_banner", method = RequestMethod.GET)
@@ -52,6 +53,7 @@ public class HomeController {
     }
 
     /**
+     * 获取首页热销商品数据
      * get("/home/goods_sale")
      */
     @RequestMapping(value = "/goods_sale", method = RequestMethod.GET)

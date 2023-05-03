@@ -11,10 +11,11 @@ import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- *
- * album sheet
+ * 相册表
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

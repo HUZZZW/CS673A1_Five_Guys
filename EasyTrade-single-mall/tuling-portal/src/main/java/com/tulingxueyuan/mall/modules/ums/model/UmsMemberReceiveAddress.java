@@ -12,9 +12,11 @@ import java.io.Serializable;
 
 /**
  * <p>
- * Member Shipping Address Form
+ * 会员收货地址表
  * </p>
  *
+ * @author XuShu
+ * @since 2023-03-05
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

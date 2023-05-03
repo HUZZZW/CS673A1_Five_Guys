@@ -12,9 +12,11 @@ import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- * Product ladder price list (only for the same product)
+ * 产品阶梯价格表(只针对同商品)
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

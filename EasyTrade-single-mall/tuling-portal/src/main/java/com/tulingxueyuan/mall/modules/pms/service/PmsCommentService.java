@@ -5,9 +5,11 @@ import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
- * Commodity Evaluation Form Service
+ * 商品评价表 服务类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 public interface PmsCommentService extends IService<PmsComment> {
 

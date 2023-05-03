@@ -8,10 +8,11 @@ import java.util.List;
 
 /**
  * <p>
- *
- * service class
+ *  服务类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-26
  */
 public interface SmsHomeCategoryService extends IService<SmsHomeCategory> {
     List<HomeGoodsSaleDTO> getGoodsSale();

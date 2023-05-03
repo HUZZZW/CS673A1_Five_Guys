@@ -5,10 +5,11 @@ import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
- *
- * Brand List Service
+ * 品牌表 服务类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 public interface PmsBrandService extends IService<PmsBrand> {
 

@@ -11,9 +11,11 @@ import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- * Order Setup Form
+ * 订单设置表
  * </p>
  *
+ * @author XuShu
+ * @since 2023-03-12
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

@@ -8,10 +8,11 @@ import org.springframework.stereotype.Service;
 
 /**
  * <p>
- *
- * Member Shipping Address Form
+ * 会员收货地址表 服务实现类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-03-05
  */
 @Service
 public class UmsMemberReceiveAddressServiceImpl extends ServiceImpl<UmsMemberReceiveAddressMapper, UmsMemberReceiveAddress> implements UmsMemberReceiveAddressService {

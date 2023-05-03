@@ -5,9 +5,11 @@ import com.tulingxueyuan.mall.modules.ums.model.UmsMemberLevel;
 
 /**
  * <p>
- * Membership level table Mapper interface
+ * 会员等级表 Mapper 接口
  * </p>
  *
+ * @author XuShu
+ * @since 2023-03-05
  */
 public interface UmsMemberLevelMapper extends BaseMapper<UmsMemberLevel> {
 

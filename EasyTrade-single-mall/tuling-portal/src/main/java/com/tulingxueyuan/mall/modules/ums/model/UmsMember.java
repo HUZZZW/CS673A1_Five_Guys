@@ -14,10 +14,11 @@ import javax.validation.constraints.NotBlank;
 
 /**
  * <p>
- *
- * membership form
+ * 会员表
  * </p>
  *
+ * @author XuShu
+ * @since 2023-03-05
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -33,11 +34,11 @@ public class UmsMember implements Serializable {
     private Long memberLevelId;
 
     @ApiModelProperty(value = "用户名")
-    @NotBlank(message = "Username Can't Empty!")
+    @NotBlank(message = "用户名不能为空")
     private String username;
 
     @ApiModelProperty(value = "密码")
-    @NotBlank(message = "Password can't Empty!")
+    @NotBlank(message = "密码不能为空")
     private String password;
 
     @ApiModelProperty(value = "昵称")

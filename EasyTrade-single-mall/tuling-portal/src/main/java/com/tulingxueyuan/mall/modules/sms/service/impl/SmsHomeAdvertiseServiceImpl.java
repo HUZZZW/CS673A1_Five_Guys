@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * <p>
- * Home page carousel advertisement table service implementation class
+ * 首页轮播广告表 服务实现类
  * </p>
  */
 @Service

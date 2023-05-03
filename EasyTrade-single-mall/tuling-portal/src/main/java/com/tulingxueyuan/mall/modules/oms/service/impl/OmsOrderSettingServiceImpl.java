@@ -8,9 +8,11 @@ import org.springframework.stereotype.Service;
 
 /**
  * <p>
- * Order setting table Service implementation class
+ * 订单设置表 服务实现类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-03-12
  */
 @Service
 public class OmsOrderSettingServiceImpl extends ServiceImpl<OmsOrderSettingMapper, OmsOrderSetting> implements OmsOrderSettingService {

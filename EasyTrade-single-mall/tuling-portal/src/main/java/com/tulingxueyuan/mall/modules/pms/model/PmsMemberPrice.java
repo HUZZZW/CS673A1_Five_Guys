@@ -12,10 +12,11 @@ import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- *
- * Commodity membership price list
+ * 商品会员价格表
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

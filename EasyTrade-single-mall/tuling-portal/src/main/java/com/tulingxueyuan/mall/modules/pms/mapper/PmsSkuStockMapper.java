@@ -5,10 +5,11 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
  * <p>
- *
- * Inventory Mapper interface for sku
+ * sku的库存 Mapper 接口
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 public interface PmsSkuStockMapper extends BaseMapper<PmsSkuStock> {
 

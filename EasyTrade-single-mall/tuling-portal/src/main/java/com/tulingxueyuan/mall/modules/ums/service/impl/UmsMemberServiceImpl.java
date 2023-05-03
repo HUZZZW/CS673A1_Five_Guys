@@ -32,10 +32,11 @@ import java.util.List;
 
 /**
  * <p>
- *
- * membership form
+ * 会员表 服务实现类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-03-05
  */
 @Service
 public class UmsMemberServiceImpl extends ServiceImpl<UmsMemberMapper, UmsMember> implements UmsMemberService {
@@ -103,6 +104,7 @@ public class UmsMemberServiceImpl extends ServiceImpl<UmsMemberMapper, UmsMember
     }
 
     /**
+     * 添加登录记录
      * @param username 用户名
      */
     private void insertLoginLog(String username) {
@@ -118,6 +120,7 @@ public class UmsMemberServiceImpl extends ServiceImpl<UmsMemberMapper, UmsMember
     }
 
     /**
+     * 获得当前用户
      * @return
      */
     public UmsMember getCurrentMember() {
@@ -247,8 +250,11 @@ public class UmsMemberServiceImpl extends ServiceImpl<UmsMemberMapper, UmsMember
 //
     @Override
     public UmsMember loadUserByUsername(String username){
+        //获取用户信息
         UmsMember member = getMemberByUsername(username);
         if (member != null) {
+            // 查询用户访问资源，暂留， 后续改动
+            // List<UmsResource> resourceList = getResourceList(member.getId());
             return member;
         }
         throw new ApiException("用户不存在");

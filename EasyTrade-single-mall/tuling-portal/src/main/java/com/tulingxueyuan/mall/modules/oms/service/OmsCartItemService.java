@@ -9,30 +9,30 @@ import java.util.List;
 
 /**
  * <p>
- * Shopping cart table service class
+ * 购物车表 服务类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-03-06
  */
 public interface OmsCartItemService extends IService<OmsCartItem> {
 
     Boolean add(AddCartDTO addCartDTO);
 
     /**
-     * Initialize the number of shopping cart items in the status bar
+     * 初始化状态栏的购物车商品数量
      * @return
      */
     Integer getCartProductSum();
 
     /**
-     *
-     * Initialize shopping cart data
+     * 初始化购物车数据
      * @return
      */
     List<CartItemStockDTO> getCartList();
 
     /**
-     *
-     * Update the quantity of the item
+     * 更新商品的数量
      * this.axios.post('/cart/update/quantity',Qs.stringify({
      * id:item.id,
      * quantity:item.quantity
@@ -41,7 +41,7 @@ public interface OmsCartItemService extends IService<OmsCartItem> {
     boolean updateQuantity(Long id, Integer quantity);
 
     /**
-     *  delete
+     *  删除
      *  this.axios.post('/cart/delete',Qs.stringify({
      *      ids:item.id
      *  }),{headers: {'Content-Type': 'application/x-www-form-urlencoded'}})

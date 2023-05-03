@@ -5,10 +5,11 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
  * <p>
- *
- * Product classification and attribute relationship table, used to set classification filter conditions (only one-level classification is supported) Mapper interface
+ * 产品的分类和属性的关系表，用于设置分类筛选条件（只支持一级分类） Mapper 接口
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 public interface PmsProductCategoryAttributeRelationMapper extends BaseMapper<PmsProductCategoryAttributeRelation> {
 

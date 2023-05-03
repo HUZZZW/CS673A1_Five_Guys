@@ -8,9 +8,11 @@ import org.springframework.stereotype.Service;
 
 /**
  * <p>
- * Product ladder price list (only for the same product) service realization class
+ * 产品阶梯价格表(只针对同商品) 服务实现类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 @Service
 public class PmsProductLadderServiceImpl extends ServiceImpl<PmsProductLadderMapper, PmsProductLadder> implements PmsProductLadderService {

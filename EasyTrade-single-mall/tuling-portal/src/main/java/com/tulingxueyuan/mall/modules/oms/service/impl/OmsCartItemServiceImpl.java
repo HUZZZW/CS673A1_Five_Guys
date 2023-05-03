@@ -26,10 +26,11 @@ import java.util.Map;
 
 /**
  * <p>
- *
- * Shopping cart table service implementation class
+ * 购物车表 服务实现类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-03-06
  */
 @Service
 public class OmsCartItemServiceImpl extends ServiceImpl<OmsCartItemMapper, OmsCartItem> implements OmsCartItemService {
@@ -47,21 +48,21 @@ public class OmsCartItemServiceImpl extends ServiceImpl<OmsCartItemMapper, OmsCa
     public Boolean add(AddCartDTO addCartDTO) {
         OmsCartItem omsCartItem = new OmsCartItem();
         BeanUtils.copyProperties(addCartDTO, omsCartItem);
-        // add membership
+        // 添加会员关系
         UmsMember currentMember = memberService.getCurrentMember();
         omsCartItem.setMemberId(currentMember.getId());
 
-        // Determine whether there are duplicate shopping carts added under the same product, sku, and user
+        // 判断同一个 商品、sku、用户 下是否添加的重复的购物车
         OmsCartItem cartItem = getCartItem(omsCartItem.getProductId(), omsCartItem.getProductSkuId(), omsCartItem.getMemberId());
 
         if (cartItem == null) {
-            //Add an item to the shopping cart
+            // 新增一个商品到购物车
 
-            // Query SKU
+            // 查询SKU
             PmsSkuStock sku = skuStockService.getById(omsCartItem.getProductSkuId());
             if (sku == null) Asserts.fail(ResultCode.VALIDATE_FAILED);
 
-            //Query products
+            // 查询商品
             PmsProduct product = productService.getById(omsCartItem.getProductId());
             if (product == null) Asserts.fail(ResultCode.VALIDATE_FAILED);
 
@@ -88,7 +89,7 @@ public class OmsCartItemServiceImpl extends ServiceImpl<OmsCartItemMapper, OmsCa
             return true;
         } 
         else {
-            //Modify the quantity of the product
+            // 修改商品数量
             cartItem.setQuantity(cartItem.getQuantity()+1);
             cartItem.setModifyDate(new Date());
             UpdateWrapper<OmsCartItem> updateWrapper = new UpdateWrapper<>();
@@ -101,7 +102,7 @@ public class OmsCartItemServiceImpl extends ServiceImpl<OmsCartItemMapper, OmsCa
     }
 
     /**
-     * Initialize the number of shopping cart items in the status bar
+     * 初始化状态栏的购物车商品数量
      * @return
      */
     @Override
@@ -123,7 +124,7 @@ public class OmsCartItemServiceImpl extends ServiceImpl<OmsCartItemMapper, OmsCa
     }
 
     /**
-     * Initialize shopping cart data
+     * 初始化购物车数据
      * @return
      */
     @Override
@@ -139,7 +140,7 @@ public class OmsCartItemServiceImpl extends ServiceImpl<OmsCartItemMapper, OmsCa
     }
 
     /**
-     * Update the quantity of the item
+     * 更新商品的数量
      * this.axios.post('/cart/update/quantity',Qs.stringify({
      * id:item.id,
      * quantity:item.quantity
@@ -155,7 +156,7 @@ public class OmsCartItemServiceImpl extends ServiceImpl<OmsCartItemMapper, OmsCa
     }
 
     /**
-     *  delete
+     *  删除
      *  this.axios.post('/cart/delete',Qs.stringify({
      *      ids:item.id
      *  }),{headers: {'Content-Type': 'application/x-www-form-urlencoded'}})
@@ -166,7 +167,7 @@ public class OmsCartItemServiceImpl extends ServiceImpl<OmsCartItemMapper, OmsCa
     }
 
     /**
-     * Determine whether to add duplicate shopping carts under the same product, sku, and user
+     * 判断同一个商品、sku、用户下是否添加重复的购物车
      * @param productId
      * @param skuId
      * @param memberId

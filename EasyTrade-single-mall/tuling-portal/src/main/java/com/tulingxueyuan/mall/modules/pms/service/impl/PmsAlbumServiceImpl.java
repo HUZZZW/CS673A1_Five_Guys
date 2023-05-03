@@ -8,9 +8,11 @@ import org.springframework.stereotype.Service;
 
 /**
  * <p>
- * Album Table Service Implementation Class
+ * 相册表 服务实现类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 @Service
 public class PmsAlbumServiceImpl extends ServiceImpl<PmsAlbumMapper, PmsAlbum> implements PmsAlbumService {

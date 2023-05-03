@@ -12,16 +12,18 @@ import java.util.List;
 
 /**
  * <p>
- * Shopping cart table Mapper interface
+ * 购物车表 Mapper 接口
  * </p>
  *
+ * @author XuShu
+ * @since 2023-03-06
  */
 public interface OmsCartItemMapper extends BaseMapper<OmsCartItem> {
 
     List<CartItemStockDTO> getCartItemStock(Long id);
 
     /**
-     *  In custom xml query combined with mp Wrapper to use
+     *  在自定义xml查询 结合mp的Wrapper 来使用
      */
     List<CartItemStockDTO> getCartItemStockByIds(@Param(Constants.WRAPPER) Wrapper ew);
 }

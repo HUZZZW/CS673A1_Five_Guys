@@ -5,10 +5,11 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
  * <p>
- *
- * Shipping cost template Mapper interface
+ * 运费模版 Mapper 接口
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 public interface PmsFeightTemplateMapper extends BaseMapper<PmsFeightTemplate> {
 

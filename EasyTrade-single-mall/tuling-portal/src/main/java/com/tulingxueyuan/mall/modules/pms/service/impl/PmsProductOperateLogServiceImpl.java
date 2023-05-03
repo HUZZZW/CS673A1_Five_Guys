@@ -8,9 +8,11 @@ import org.springframework.stereotype.Service;
 
 /**
  * <p>
- *  service implementation class
+ *  服务实现类
  * </p>
  *
+ * @author XuShu
+ * @since 2023-02-25
  */
 @Service
 public class PmsProductOperateLogServiceImpl extends ServiceImpl<PmsProductOperateLogMapper, PmsProductOperateLog> implements PmsProductOperateLogService {
