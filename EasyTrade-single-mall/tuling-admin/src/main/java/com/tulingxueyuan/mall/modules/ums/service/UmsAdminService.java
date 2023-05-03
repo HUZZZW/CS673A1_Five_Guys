@@ -12,68 +12,77 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 /**
- * Back-end administrator management Service
- * Created by macro on 2018/4/26.
+ *
+ * Background administrator management Service
  */
 public interface UmsAdminService extends IService<UmsAdmin> {
     /**
-     * Get the back-end administrator based on the user name
+     *
+     * Get the background administrator according to the user name
      */
     UmsAdmin getAdminByUsername(String username);
 
     /**
-     * Registration function
+     *
+     * registration function
      */
     UmsAdmin register(UmsAdminParam umsAdminParam);
 
     /**
-     * Login function
+     *
+     * login function
      * @param username username
      * @param password password
-     * @return produce JWT token
+     * @return The generated JWT token
      */
     UmsAdmin login(String username, String password);
 
 
 
     /**
-     * Pagination searches for users by username or nickname
+     *
+     * Query users according to user name or nickname
      */
     Page<UmsAdmin> list(String keyword, Integer pageSize, Integer pageNum);
 
     /**
-     * Modify the specified user information
+     *
+     * Modify specified user information
      */
     boolean update(Long id, UmsAdmin admin);
 
     /**
-     * Remove specified user
+     *
+     * delete specified user
      */
     boolean delete(Long id);
 
     /**
-     * Modify user role relationships
+     * Modify User Role Relationships
      */
     @Transactional
     int updateRole(Long adminId, List<Long> roleIds);
 
     /**
-     * Get the user for the role
+     *
+     * get user for role
      */
     List<UmsRole> getRoleList(Long adminId);
 
     /**
-     * Retrieves the accessible resources for the specified user
+     * Get the accessible resources of the specified user
      */
     List<UmsResource> getResourceList(Long adminId);
 
     /**
-     * Change password
+     *
+     * change Password
      */
     int updatePassword(UpdateAdminPasswordParam updatePasswordParam);
 
     /**
-     * Getting user information
+     *
+     * Get user information
      */
     UmsAdmin loadUserByUsername(String username);
 }

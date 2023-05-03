@@ -11,8 +11,8 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Back-end resource classification management Service implementation class
- * Created by macro on 2020/2/5.
+ *
+ * Background resource classification management Service implementation class
  */
 @Service
 public class UmsResourceCategoryServiceImpl extends ServiceImpl<UmsResourceCategoryMapper,UmsResourceCategory> implements UmsResourceCategoryService {

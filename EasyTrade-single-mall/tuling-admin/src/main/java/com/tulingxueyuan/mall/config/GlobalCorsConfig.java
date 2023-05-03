@@ -14,18 +14,18 @@ import org.springframework.web.filter.CorsFilter;
 public class GlobalCorsConfig  {
 
     /**
-     * Filters that allow cross-domain invocation
+     * Filters that allow cross-origin calls
      */
     @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
-        //Allows all domain names to be called across domains
+        //Allow all domain names to make cross-domain calls
         config.addAllowedOrigin("*");
-        //Allow sending across cookies
+        //Allow cookies to be sent across
         config.setAllowCredentials(true);
-        //Release all original headers
+        //Release all original header information
         config.addAllowedHeader("*");
-        //Allows all request methods to be invoked across domains
+        //Allow all request methods to be called across domains
         config.addAllowedMethod("*");
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config);

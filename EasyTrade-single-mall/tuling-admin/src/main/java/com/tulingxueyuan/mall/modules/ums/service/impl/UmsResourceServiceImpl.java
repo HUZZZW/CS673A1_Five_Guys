@@ -15,8 +15,8 @@ import org.springframework.stereotype.Service;
 import java.util.Date;
 
 /**
- * Back-end resource management Service implementation class
- * Created by macro on 2020/2/2.
+ *
+ * Background resource management Service implementation class
  */
 @Service
 public class UmsResourceServiceImpl extends ServiceImpl<UmsResourceMapper,UmsResource>implements UmsResourceService {

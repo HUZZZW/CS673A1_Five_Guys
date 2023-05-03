@@ -5,11 +5,9 @@ import com.tulingxueyuan.mall.modules.ums.model.UmsRoleMenuRelation;
 
 /**
  * <p>
- * Back-end role menu relationship table Mapper interface
+ * Background role menu relationship table Mapper interface
  * </p>
  *
- * @author macro
- * @since 2020-08-21
  */
 public interface UmsRoleMenuRelationMapper extends BaseMapper<UmsRoleMenuRelation> {
 

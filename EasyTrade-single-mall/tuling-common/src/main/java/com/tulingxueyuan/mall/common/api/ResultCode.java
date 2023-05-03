@@ -1,15 +1,15 @@
 package com.tulingxueyuan.mall.common.api;
 
 /**
- * Some common API opcodes are enumerated
- * Created by macro on 2019/4/19.
+ *
+ * Some commonly used API opcodes are enumerated
  */
 public enum ResultCode implements IErrorCode {
-    SUCCESS(200, "operate successfully"),
-    FAILED(500, "operation failure"),
-    VALIDATE_FAILED(404, "Failed parameter test"),
-    UNAUTHORIZED(401, "Not logged in or session has expired"),
-    FORBIDDEN(403, "No permissions");
+    SUCCESS(200, "操作成功"),
+    FAILED(500, "操作失败"),
+    VALIDATE_FAILED(404, "参数检验失败"),
+    UNAUTHORIZED(401, "暂未登录或session已经过期"),
+    FORBIDDEN(403, "没有相关权限");
     private long code;
     private String message;
 

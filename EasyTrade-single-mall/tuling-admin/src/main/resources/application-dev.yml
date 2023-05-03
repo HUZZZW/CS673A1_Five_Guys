@@ -1,29 +1,16 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/tiny_test?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://localhost:3306/mall_tiny_new?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
     username: root
-    password: Hzhym1996
+    password: l654534335
   redis:
-    host: 127.0.0.1 # Redis server address
-    database: 0 # Redis Database index (default 0)
-    port: 6379 # Redis Server connection port
-    password: # Redis Server connection password (null by default)
-    timeout: 3000ms # Connection timeout (ms)
+    host: 127.0.0.1 # Redis服务器地址
+    database: 0 # Redis数据库索引（默认为0）
+    port: 6379 # Redis服务器连接端口
+    password: # Redis服务器连接密码（默认为空）
+    timeout: 3000ms # 连接超时时间（毫秒）
 
 logging:
   level:
     root: info
     com.tulingxueyuan: debug
-
-aliyun:
-  oss:
-    endpoint: oss-cn-chengdu.aliyuncs.com # oss The domain name to access the external service
-    accessKeyId: LTAI4GHWCM5LdNoiLy35mBog # User identification is used in access authentication
-    accessKeySecret: Vytl0LAIKGmiWATIuuwevN3LjzQs9S # The user is used to encrypt the signature string and the secret key used by oss to verify the signature string
-    bucketName: tulingmall-xushu # oss storage space
-    policy:
-      expire: 300 # Validity of signature (S)
-    maxSize: 10 # Upload file size(M)
-    #callback:  # The callback address after the file upload was successful
-    dir:
-      prefix: tulingmall/images/ # Upload folder path prefix

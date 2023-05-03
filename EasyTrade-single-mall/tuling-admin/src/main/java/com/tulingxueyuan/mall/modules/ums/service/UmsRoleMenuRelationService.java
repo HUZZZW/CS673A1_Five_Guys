@@ -4,8 +4,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.tulingxueyuan.mall.modules.ums.model.UmsRoleMenuRelation;
 
 /**
- * Role menu relationship management Service
- * Created by macro on 2020/8/21.
+ *
+ * Role Menu Relationship Management Service
  */
 public interface UmsRoleMenuRelationService extends IService<UmsRoleMenuRelation> {
 }

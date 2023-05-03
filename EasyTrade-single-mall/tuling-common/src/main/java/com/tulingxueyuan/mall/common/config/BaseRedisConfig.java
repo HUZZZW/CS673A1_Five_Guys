@@ -20,8 +20,8 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 import java.time.Duration;
 
 /**
+ *
  * Redis basic configuration
- * Created by macro on 2020/6/119.
  */
 public class BaseRedisConfig {
 
@@ -44,7 +44,7 @@ public class BaseRedisConfig {
         Jackson2JsonRedisSerializer<Object> serializer = new Jackson2JsonRedisSerializer<>(Object.class);
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
-        //Must be set otherwise we won't be able to convert JSON to an object，will be converted to a Map
+        //It must be set, otherwise JSON cannot be converted into an object, and it will be converted into a Map type
         objectMapper.activateDefaultTyping(LaissezFaireSubTypeValidator.instance,ObjectMapper.DefaultTyping.NON_FINAL);
         serializer.setObjectMapper(objectMapper);
         return serializer;
@@ -53,7 +53,7 @@ public class BaseRedisConfig {
     @Bean
     public RedisCacheManager redisCacheManager(RedisConnectionFactory redisConnectionFactory) {
         RedisCacheWriter redisCacheWriter = RedisCacheWriter.nonLockingRedisCacheWriter(redisConnectionFactory);
-        //Set the Redis cache to be valid for 1 day
+        //Set the Redis cache validity period to 1 day
         RedisCacheConfiguration redisCacheConfiguration = RedisCacheConfiguration.defaultCacheConfig()
                 .serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(redisSerializer())).entryTtl(Duration.ofDays(1));
         return new RedisCacheManager(redisCacheWriter, redisCacheConfiguration);

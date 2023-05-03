@@ -8,16 +8,16 @@ import java.util.List;
 
 /**
  * <p>
- * Back-end user table Mapper interface
+ *
+ * Background user table Mapper interface
  * </p>
  *
- * @author macro
- * @since 2020-08-21
  */
 public interface UmsAdminMapper extends BaseMapper<UmsAdmin> {
 
     /**
-     * Gets a list of user ids associated with resources
+     *
+     * Get a list of resource-related user IDs
      */
     List<Long> getAdminIdList(@Param("resourceId") Long resourceId);
 

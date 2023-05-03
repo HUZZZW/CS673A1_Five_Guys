@@ -18,8 +18,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Back-end user cache management Service implementation class
- * Created by macro on 2020/3/13.
+ * Background user cache management Service implementation class
  */
 @Service
 public class UmsAdminCacheServiceImpl implements UmsAdminCacheService {

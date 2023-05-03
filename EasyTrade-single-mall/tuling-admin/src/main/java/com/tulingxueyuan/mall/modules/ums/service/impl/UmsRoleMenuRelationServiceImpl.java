@@ -7,8 +7,8 @@ import com.tulingxueyuan.mall.modules.ums.service.UmsRoleMenuRelationService;
 import org.springframework.stereotype.Service;
 
 /**
- * Role Menu Relationship Management Service implementation class
- * Created by macro on 2020/8/21.
+ *
+ * Role menu relationship management Service implementation class
  */
 @Service
 public class UmsRoleMenuRelationServiceImpl extends ServiceImpl<UmsRoleMenuRelationMapper, UmsRoleMenuRelation> implements UmsRoleMenuRelationService {

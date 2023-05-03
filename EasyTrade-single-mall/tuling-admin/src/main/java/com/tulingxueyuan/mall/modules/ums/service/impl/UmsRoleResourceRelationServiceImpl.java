@@ -7,8 +7,8 @@ import com.tulingxueyuan.mall.modules.ums.service.UmsRoleResourceRelationService
 import org.springframework.stereotype.Service;
 
 /**
- * Role Resource Relationship Management Service implementation class
- * Created by macro on 2020/8/21.
+ *
+ * Role resource relationship management Service implementation class
  */
 @Service
 public class UmsRoleResourceRelationServiceImpl extends ServiceImpl<UmsRoleResourceRelationMapper, UmsRoleResourceRelation> implements UmsRoleResourceRelationService {

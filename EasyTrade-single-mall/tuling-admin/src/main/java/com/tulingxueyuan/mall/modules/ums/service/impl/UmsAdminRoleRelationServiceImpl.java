@@ -7,8 +7,8 @@ import com.tulingxueyuan.mall.modules.ums.service.UmsAdminRoleRelationService;
 import org.springframework.stereotype.Service;
 
 /**
- * Administrator role Relationship Management Service implementation class
- * Created by macro on 2020/8/21.
+ *
+ * Administrator role relationship management Service implementation class
  */
 @Service
 public class UmsAdminRoleRelationServiceImpl extends ServiceImpl<UmsAdminRoleRelationMapper, UmsAdminRoleRelation> implements UmsAdminRoleRelationService {

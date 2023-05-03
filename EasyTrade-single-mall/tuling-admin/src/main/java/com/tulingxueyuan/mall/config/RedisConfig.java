@@ -5,7 +5,7 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * Redis set up
+ * Redis config
  * Created by macro on 2020/3/2.
  */
 @EnableCaching

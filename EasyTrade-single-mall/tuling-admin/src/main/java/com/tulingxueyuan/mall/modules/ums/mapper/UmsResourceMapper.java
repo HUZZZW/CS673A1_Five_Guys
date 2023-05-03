@@ -9,21 +9,20 @@ import java.util.List;
 
 /**
  * <p>
- * Back-end resource table Mapper interface
+ * Background resource table Mapper interface
  * </p>
  *
- * @author macro
- * @since 2020-08-21
  */
 public interface UmsResourceMapper extends BaseMapper<UmsResource> {
 
     /**
-     * Obtain all resources accessible to the user
+     *
+     * Get all accessible resources of the user
      */
     List<UmsResource> getResourceList(@Param("adminId") Long adminId);
 
     /**
-     * Gets resources based on the role ID
+     * Get resources by role ID
      */
     List<UmsResource> getResourceListByRoleId(@Param("roleId") Long roleId);
 

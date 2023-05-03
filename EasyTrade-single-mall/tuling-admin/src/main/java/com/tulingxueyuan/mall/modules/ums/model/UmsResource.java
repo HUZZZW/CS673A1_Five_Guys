@@ -13,16 +13,14 @@ import java.util.Date;
 
 /**
  * <p>
- * Back-end resource table
+ * background resource table
  * </p>
  *
- * @author macro
- * @since 2020-08-21
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @TableName("ums_resource")
-@ApiModel(value="UmsResource object", description="back-end resource table")
+@ApiModel(value="UmsResource对象", description="后台资源表")
 public class UmsResource implements Serializable {
 
     private static final long serialVersionUID=1L;
@@ -30,19 +28,19 @@ public class UmsResource implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
-    @ApiModelProperty(value = "creation time")
+    @ApiModelProperty(value = "创建时间")
     private Date createTime;
 
-    @ApiModelProperty(value = "resource name")
+    @ApiModelProperty(value = "资源名称")
     private String name;
 
-    @ApiModelProperty(value = "resource URL")
+    @ApiModelProperty(value = "资源URL")
     private String url;
 
-    @ApiModelProperty(value = "description")
+    @ApiModelProperty(value = "描述")
     private String description;
 
-    @ApiModelProperty(value = "resource classification ID")
+    @ApiModelProperty(value = "资源分类ID")
     private Long categoryId;
 
 

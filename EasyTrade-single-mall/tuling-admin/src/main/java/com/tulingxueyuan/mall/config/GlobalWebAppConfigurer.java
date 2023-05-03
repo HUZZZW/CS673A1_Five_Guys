@@ -8,13 +8,14 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
- * Permission validation interceptor
+ * Authorization verification interceptor
  */
 @Configuration
 public class GlobalWebAppConfigurer implements WebMvcConfigurer {
 
     /**
-     * The interceptor is primarily for permission verification
+     *
+     * The interceptor is mainly for permission verification
      * @param registry
      */
     @Override

@@ -14,18 +14,17 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * Back-end resource management Controller
- * Created by macro on 2020/2/4.
+ * Background Resource Management Controller
  */
 @Controller
-@Api(tags = "UmsResourceController", description = "Back-end resource management")
+@Api(tags = "UmsResourceController", description = "后台资源管理")
 @RequestMapping("/resource")
 public class UmsResourceController {
 
     @Autowired
     private UmsResourceService resourceService;
 
-    @ApiOperation("Adding back-end resources")
+    @ApiOperation("添加后台资源")
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     @ResponseBody
     public CommonResult create(@RequestBody UmsResource umsResource) {
@@ -37,7 +36,7 @@ public class UmsResourceController {
         }
     }
 
-    @ApiOperation("Modifying back-end resources")
+    @ApiOperation("修改后台资源")
     @RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
     @ResponseBody
     public CommonResult update(@PathVariable Long id,
@@ -50,7 +49,7 @@ public class UmsResourceController {
         }
     }
 
-    @ApiOperation("Obtain resource details by ID")
+    @ApiOperation("根据ID获取资源详情")
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     @ResponseBody
     public CommonResult<UmsResource> getItem(@PathVariable Long id) {
@@ -58,7 +57,7 @@ public class UmsResourceController {
         return CommonResult.success(umsResource);
     }
 
-    @ApiOperation("Delete a back-end resource based on its ID")
+    @ApiOperation("根据ID删除后台资源")
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
     @ResponseBody
     public CommonResult delete(@PathVariable Long id) {
@@ -70,7 +69,7 @@ public class UmsResourceController {
         }
     }
 
-    @ApiOperation("Paging fuzzy query back-end resources")
+    @ApiOperation("分页模糊查询后台资源")
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     @ResponseBody
     public CommonResult<CommonPage<UmsResource>> list(@RequestParam(required = false) Long categoryId,
@@ -82,7 +81,7 @@ public class UmsResourceController {
         return CommonResult.success(CommonPage.restPage(resourceList));
     }
 
-    @ApiOperation("Query all back-end resources")
+    @ApiOperation("查询所有后台资源")
     @RequestMapping(value = "/listAll", method = RequestMethod.GET)
     @ResponseBody
     public CommonResult<List<UmsResource>> listAll() {

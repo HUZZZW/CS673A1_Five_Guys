@@ -4,8 +4,8 @@ package com.tulingxueyuan.mall.common.exception;
 import com.tulingxueyuan.mall.common.api.IErrorCode;
 
 /**
- * Custom API exceptions
- * Created by macro on 2020/2/27.
+ *
+ * Custom API exception
  */
 public class ApiException extends RuntimeException {
     private IErrorCode errorCode;

@@ -8,12 +8,11 @@ import lombok.Setter;
 import java.util.List;
 
 /**
- * Back-end menu node encapsulation
- * Created by macro on 2020/2/4.
+ * Background menu node encapsulation
  */
 @Getter
 @Setter
 public class UmsMenuNode extends UmsMenu {
-    @ApiModelProperty(value = "sublevel menu")
+    @ApiModelProperty(value = "子级菜单")
     private List<UmsMenuNode> children;
 }

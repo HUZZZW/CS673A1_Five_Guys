@@ -5,11 +5,10 @@ import com.tulingxueyuan.mall.modules.ums.model.UmsResourceCategory;
 
 /**
  * <p>
- * Resource classification table Mapper Interface
+ *
+ * Resource classification table Mapper interface
  * </p>
  *
- * @author macro
- * @since 2020-08-21
  */
 public interface UmsResourceCategoryMapper extends BaseMapper<UmsResourceCategory> {
 

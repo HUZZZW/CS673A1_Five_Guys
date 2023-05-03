@@ -11,10 +11,10 @@ import java.util.List;
 
 /**
  * <p>
- * Membership level table service implementation class
+ *
+ * Membership Level Table Service Realization Class
  * </p>
  *
- * @since 2021-03-09
  */
 @Service
 public class UmsMemberLevelServiceImpl extends ServiceImpl<UmsMemberLevelMapper, UmsMemberLevel> implements UmsMemberLevelService {

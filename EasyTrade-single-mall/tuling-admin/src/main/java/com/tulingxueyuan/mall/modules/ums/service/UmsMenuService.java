@@ -9,32 +9,35 @@ import com.tulingxueyuan.mall.modules.ums.model.UmsMenu;
 import java.util.List;
 
 /**
- * Back-end menu management Service
- * Created by macro on 2020/2/2.
+ * Background menu management service
  */
 public interface UmsMenuService extends IService<UmsMenu> {
     /**
-     * Creating a back-end menu
+     *
+     * Create background menu
      */
     boolean create(UmsMenu umsMenu);
 
     /**
-     * Modify the back-end menu
+     * Modify background menu
      */
     boolean update(Long id, UmsMenu umsMenu);
 
     /**
-     * Paginate the back-end menu
+     *
+     * Paging query background menu
      */
     Page<UmsMenu> list(Long parentId, Integer pageSize, Integer pageNum);
 
     /**
-     * The tree structure returns a list of all menus
+     *
+     * Tree structure returns a list of all menus
      */
     List<UmsMenuNode> treeList();
 
     /**
-     * Modify the display state of the menu
+     *
+     * Modify menu display status
      */
     boolean updateHidden(Long id, Integer hidden);
 }

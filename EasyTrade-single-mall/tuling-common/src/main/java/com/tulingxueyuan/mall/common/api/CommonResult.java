@@ -1,8 +1,8 @@
 package com.tulingxueyuan.mall.common.api;
 
 /**
- * Generic return object
- * Created by macro on 2019/4/19.
+ *
+ * generic return object
  */
 public class CommonResult<T> {
     private long code;
@@ -19,26 +19,28 @@ public class CommonResult<T> {
     }
 
     /**
+     *
      * Return result successfully
      *
-     * @param data Retrieved data
+     * @param data acquired data
      */
     public static <T> CommonResult<T> success(T data) {
         return new CommonResult<T>(ResultCode.SUCCESS.getCode(), ResultCode.SUCCESS.getMessage(), data);
     }
 
     /**
+     *
      * Return result successfully
      *
-     * @param data Retrieved data
-     * @param  message hint
+     * @param data acquired data
+     * @param  message prompt information
      */
     public static <T> CommonResult<T> success(T data, String message) {
         return new CommonResult<T>(ResultCode.SUCCESS.getCode(), message, data);
     }
 
     /**
-     * Return results on failure
+     * Failed to return result
      * @param errorCode error code
      */
     public static <T> CommonResult<T> failed(IErrorCode errorCode) {
@@ -46,7 +48,7 @@ public class CommonResult<T> {
     }
 
     /**
-     * Return results on failure
+     * Failed to return result
      * @param errorCode error code
      * @param message error message
      */
@@ -55,44 +57,47 @@ public class CommonResult<T> {
     }
 
     /**
-     * Return results on failure
-     * @param message hint
+     *
+     * Failed to return result
+     * @param message prompt information
      */
     public static <T> CommonResult<T> failed(String message) {
         return new CommonResult<T>(ResultCode.FAILED.getCode(), message, null);
     }
 
     /**
-     * Return results on failure
+     * Failed to return result
      */
     public static <T> CommonResult<T> failed() {
         return failed(ResultCode.FAILED);
     }
 
     /**
-     * Parameter validation failed to return a result
+     * Parameter verification failed to return the result
      */
     public static <T> CommonResult<T> validateFailed() {
         return failed(ResultCode.VALIDATE_FAILED);
     }
 
     /**
-     * Parameter validation failed to return a result
-     * @param message hint
+     *
+     * Parameter verification failed to return the result
+     * @param message prompt information
      */
     public static <T> CommonResult<T> validateFailed(String message) {
         return new CommonResult<T>(ResultCode.VALIDATE_FAILED.getCode(), message, null);
     }
 
     /**
-     * Not logged in Returns the result
+     *
+     * Not logged in return result
      */
     public static <T> CommonResult<T> unauthorized(T data) {
         return new CommonResult<T>(ResultCode.UNAUTHORIZED.getCode(), ResultCode.UNAUTHORIZED.getMessage(), data);
     }
 
     /**
-     * Unauthorized return of results
+     * Unauthorized return result
      */
     public static <T> CommonResult<T> forbidden(T data) {
         return new CommonResult<T>(ResultCode.FORBIDDEN.getCode(), ResultCode.FORBIDDEN.getMessage(), data);

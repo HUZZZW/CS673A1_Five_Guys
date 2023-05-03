@@ -15,8 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ *
  * Swagger basic configuration
- * Created by macro on 2020/7/16.
  */
 public abstract class BaseSwaggerConfig {
 
@@ -45,26 +45,33 @@ public abstract class BaseSwaggerConfig {
     }
 
     /**
-     * After setting, enter SwaggerUI, and the "Authorization" button will appear. Click it to enter the authentication parameters we configured
-     * For interfaces that do not require input parameters (the interface that contains auth as described above), access is possible without entering Authorization parameters.
-     * Configure global parameters through Swagger2's securitySchemes: Add a parameter called "Authorization" with type "header" to the ApiKey of securitySchemes, as shown in the code below.
+     *
+     * After the setting is complete, enter SwaggerUI, and the "Authorization" button will appear. Click it to enter the authentication parameters we configured.
+     *
+     * For interfaces that do not require input parameters (the above-mentioned interfaces that include auth), they can be accessed without entering the Authorization parameter.
+     *
+     * Configure global parameters through Swagger2's securitySchemes: As shown in the following code, add a parameter named "Authorization" and type "header" to the ApiKey of securitySchemes.
      * @return
      */
     private List<ApiKey> securitySchemes() {
-        //Set the request header
+        //设置请求头信息
         List<ApiKey> result = new ArrayList<>();
         ApiKey apiKey = new ApiKey("Authorization", "Authorization", "header");
         result.add(apiKey);
         return result;
     }
     /**
-     * In Swagger2's securityContexts, set up interfaces that require parameters (or remove interfaces that do not require authentication parameters) using regular expressions in Swagger2's SecurityContexts，
-     * As shown in the following code, use PathSelectors.regex("^(? ! auth).*$"), all interfaces that contain "auth" do not need to use securitySchemes
-     * That is, the authentication parameter named "Authorization" and type "header" configured in the preceding paragraph do not need to be used.
-     * Generally speaking, if it can match, the default authentication will be used, and the Authorization authentication parameter in the header will not be used
+     *
+     * Through regular expressions in the securityContexts of Swagger2, set the interface that needs to use parameters (or in other words, remove the interface that does not need to use authentication parameters),
+     *
+     * As shown in the following code, through PathSelectors.regex("^(?!auth).*$"), all interfaces containing "auth" do not need to use securitySchemes.
+     *
+     * That is, it is not necessary to use the authentication parameters named "Authorization" and type "header" set above.
+     *
+     * In layman's terms, the default authentication is used if it can match, and the Authorization authentication parameter in the header is not used.
      */
     private List<SecurityContext> securityContexts() {
-        //Set the path for login authentication
+        //设置需要登录认证的路径
         List<SecurityContext> result = new ArrayList<>();
         result.add(getContextByPath("/*/.*"));
         return result;
@@ -87,7 +94,7 @@ public abstract class BaseSwaggerConfig {
     }
 
     /**
-     * Customize the Swagger configuration
+     * Custom Swagger configuration
      */
     public abstract SwaggerProperties swaggerProperties();
 }

@@ -8,16 +8,15 @@ import java.util.List;
 
 /**
  * <p>
- * Back-end user role table Mapper interface
+ * Background user role table Mapper interface
  * </p>
  *
- * @author macro
- * @since 2020-08-21
  */
 public interface UmsRoleMapper extends BaseMapper<UmsRole> {
 
     /**
-     * Obtain all roles of the user
+     *
+     * Get all roles of a user
      */
     List<UmsRole> getRoleList(@Param("adminId") Long adminId);
 

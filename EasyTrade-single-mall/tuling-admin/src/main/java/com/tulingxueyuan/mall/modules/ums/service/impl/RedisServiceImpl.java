@@ -10,8 +10,8 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
- * redis operation implementation class
- * Created by macro on 2020/3/3.
+ *
+ * Redis operation implementation class
  */
 public class RedisServiceImpl implements RedisService {
     @Autowired

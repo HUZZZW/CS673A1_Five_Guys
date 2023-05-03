@@ -4,8 +4,8 @@ package com.tulingxueyuan.mall.common.exception;
 import com.tulingxueyuan.mall.common.api.IErrorCode;
 
 /**
- * An assertion handling class that throws various API exceptions
- * Created by macro on 2020/2/27.
+ *
+ * Assertion processing class, used to throw various API exceptions
  */
 public class Asserts {
     public static void fail(String message) {

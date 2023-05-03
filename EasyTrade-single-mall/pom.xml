@@ -7,6 +7,7 @@
         <module>tuling-common</module>
         <module>tuling-admin</module>
         <module>tuling-mpbg</module>
+        <module>tuling-portal</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -32,6 +33,7 @@
         <velocity.version>2.2</velocity.version>
         <lombok.version>1.18.16</lombok.version>
         <mall.common.version>0.0.1-SNAPSHOT</mall.common.version>
+        <jwt.version>0.9.0</jwt.version>
     </properties>
 
     <dependencies>
@@ -137,6 +139,12 @@
                 <groupId>org.apache.velocity</groupId>
                 <artifactId>velocity-engine-core</artifactId>
                 <version>${velocity.version}</version>
+            </dependency>
+            <!--jwt-->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jwt.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -6,27 +6,31 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.tulingxueyuan.mall.modules.ums.model.UmsResource;
 
 /**
- * Back-end resource management Service
- * Created by macro on 2020/2/2.
+ *
+ * Background Resource Management Service
  */
 public interface UmsResourceService extends IService<UmsResource> {
     /**
-     * Adding resources
+     *
+     * add resources
      */
     boolean create(UmsResource umsResource);
 
     /**
-     * Modifying resources
+     *
+     * edit resources
      */
     boolean update(Long id, UmsResource umsResource);
 
     /**
-     * Deleting resources
+     *
+     * delete resources
      */
     boolean delete(Long id);
 
     /**
-     * Paginate resources
+     *
+     * Paging query resources
      */
     Page<UmsResource> list(Long categoryId, String nameKeyword, String urlKeyword, Integer pageSize, Integer pageNum);
 }

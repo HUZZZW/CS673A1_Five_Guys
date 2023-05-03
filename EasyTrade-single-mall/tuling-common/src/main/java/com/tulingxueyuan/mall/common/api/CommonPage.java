@@ -6,8 +6,8 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import java.util.List;
 
 /**
+ *
  * Paging data encapsulation class
- * Created by macro on 2019/4/19.
  */
 public class CommonPage<T> {
     private Integer pageNum;
@@ -17,19 +17,20 @@ public class CommonPage<T> {
     private List<T> list;
 
     /**
-     * Let MyBatis Plus the paging results are transformed into generic results
+     *
+     * Convert MyBatis Plus paging results to generic results
      */
     public static <T> CommonPage<T> restPage(Page<T> pageResult) {
         CommonPage<T> result = new CommonPage<>();
-        // current page
+
         result.setPageNum(Convert.toInt(pageResult.getCurrent()));
-        // How many pieces of data per page
+
         result.setPageSize(Convert.toInt(pageResult.getSize()));
-        // Total Number of data
+
         result.setTotal(pageResult.getTotal());
-        // number of total pages
+
         result.setTotalPage(Convert.toInt(pageResult.getTotal()/pageResult.getSize()+1));
-        // Current page data
+
         result.setList(pageResult.getRecords());
         return result;
     }

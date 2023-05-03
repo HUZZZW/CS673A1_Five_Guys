@@ -12,16 +12,15 @@ import java.io.Serializable;
 
 /**
  * <p>
- * Back-end role menu relationship table
+ *
+ * Background role menu relationship table
  * </p>
  *
- * @author macro
- * @since 2020-08-21
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @TableName("ums_role_menu_relation")
-@ApiModel(value="UmsRoleMenuRelation object", description="back-end role menu relationship table")
+@ApiModel(value="UmsRoleMenuRelation对象", description="后台角色菜单关系表")
 public class UmsRoleMenuRelation implements Serializable {
 
     private static final long serialVersionUID=1L;
@@ -29,10 +28,10 @@ public class UmsRoleMenuRelation implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
-    @ApiModelProperty(value = "role ID")
+    @ApiModelProperty(value = "角色ID")
     private Long roleId;
 
-    @ApiModelProperty(value = "menu ID")
+    @ApiModelProperty(value = "菜单ID")
     private Long menuId;
 
 

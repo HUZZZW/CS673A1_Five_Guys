@@ -13,17 +13,17 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * Back-end resource classification management Controller
- * Created by macro on 2020/2/5.
+ *
+ * Background resource classification management Controller
  */
 @Controller
-@Api(tags = "UmsResourceCategoryController", description = "Back-end resource classification management")
+@Api(tags = "UmsResourceCategoryController", description = "后台资源分类管理")
 @RequestMapping("/resourceCategory")
 public class UmsResourceCategoryController {
     @Autowired
     private UmsResourceCategoryService resourceCategoryService;
 
-    @ApiOperation("Query the categories of all back-end resources")
+    @ApiOperation("查询所有后台资源分类")
     @RequestMapping(value = "/listAll", method = RequestMethod.GET)
     @ResponseBody
     public CommonResult<List<UmsResourceCategory>> listAll() {
@@ -31,7 +31,7 @@ public class UmsResourceCategoryController {
         return CommonResult.success(resourceList);
     }
 
-    @ApiOperation("Add a back-end resource category")
+    @ApiOperation("添加后台资源分类")
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     @ResponseBody
     public CommonResult create(@RequestBody UmsResourceCategory umsResourceCategory) {
@@ -43,7 +43,7 @@ public class UmsResourceCategoryController {
         }
     }
 
-    @ApiOperation("Modify a back-end resource category")
+    @ApiOperation("修改后台资源分类")
     @RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
     @ResponseBody
     public CommonResult update(@PathVariable Long id,
@@ -57,7 +57,7 @@ public class UmsResourceCategoryController {
         }
     }
 
-    @ApiOperation("Delete a back-end resource based on its ID")
+    @ApiOperation("根据ID删除后台资源")
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
     @ResponseBody
     public CommonResult delete(@PathVariable Long id) {

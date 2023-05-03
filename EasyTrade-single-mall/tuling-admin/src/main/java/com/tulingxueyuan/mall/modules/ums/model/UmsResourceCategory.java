@@ -13,16 +13,15 @@ import java.util.Date;
 
 /**
  * <p>
- * Resource classification table
+ *
+ * Resource Classification Table
  * </p>
  *
- * @author macro
- * @since 2020-08-21
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @TableName("ums_resource_category")
-@ApiModel(value="UmsResourceCategory object", description="resource classification table")
+@ApiModel(value="UmsResourceCategory对象", description="资源分类表")
 public class UmsResourceCategory implements Serializable {
 
     private static final long serialVersionUID=1L;
@@ -30,13 +29,13 @@ public class UmsResourceCategory implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
-    @ApiModelProperty(value = "creation time")
+    @ApiModelProperty(value = "创建时间")
     private Date createTime;
 
-    @ApiModelProperty(value = "systematic name")
+    @ApiModelProperty(value = "分类名称")
     private String name;
 
-    @ApiModelProperty(value = "sort")
+    @ApiModelProperty(value = "排序")
     private Integer sort;
 
 

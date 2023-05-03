@@ -18,11 +18,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
- * Function: Verify user login and menu resource permission
+ * Role: Verify whether the user is logged in, menu resource permissions
  */
 public class AuthInterceptor extends HandlerInterceptorAdapter {
 
-    // Whitelist in the configuration file. secure.ignored.urls
+    // Whitelist: secure.ignored.urls in the configuration file
     private List<String> urls;
 
     @Autowired
@@ -30,10 +30,10 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        //1、Paths that can be accessed without login -- whitelist
-        // Get current request   /admin/login
+        //1. Paths that can be accessed without logging in - whitelist
+        //Get the current request   /admin/login
         String requestURI = request.getRequestURI();
-        // Ant Mode path matching /**  ？  _
+        // Ant way path matching /**  ？  _
         PathMatcher matcher = new AntPathMatcher();
         for (String ignoredUrl : urls) {
             if(matcher.match(ignoredUrl,requestURI)){
@@ -41,13 +41,13 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
             }
         }
 
-        //2、If the user is not logged in, access is directly denied
+        //2. For users who are not logged in, access is directly denied
         if (null == request.getSession().getAttribute(ComConstants.FLAG_CURRENT_USER)) {
             throw new ApiException(ResultCode.UNAUTHORIZED);
         } else {
-            //3、You have logged in to check whether the user has the resource access permission  Todo:achieve spring security
+            //3. Logged in user, determine whether there is resource access permission
             UmsAdmin umsAdmin = (UmsAdmin) request.getSession().getAttribute(ComConstants.FLAG_CURRENT_USER);
-            // Obtain all resources accessible to the user
+            // Get all accessible resources of the user
             List<UmsResource> resourceList = umsAdminService.getResourceList(umsAdmin.getId());
             for (UmsResource umsResource : resourceList) {
                 if(matcher.match( umsResource.getUrl(),requestURI)){

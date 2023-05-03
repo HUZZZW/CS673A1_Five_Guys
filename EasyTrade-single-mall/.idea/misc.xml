@@ -12,8 +12,9 @@
         <option value="$PROJECT_DIR$/tuling-test/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/tuling-protal/pom.xml" />
+        <option value="$PROJECT_DIR$/tuling-portal/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_12" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_12" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>

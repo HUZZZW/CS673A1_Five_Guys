@@ -8,20 +8,20 @@ import java.util.List;
 
 /**
  * <p>
- * Back-end menu table Mapper interface
+ * Background menu table Mapper interface
  * </p>
  *
- * @author macro
- * @since 2020-08-21
  */
 public interface UmsMenuMapper extends BaseMapper<UmsMenu> {
 
     /**
-     * Get the menu based on the background user ID
+     *
+     * Get the menu according to the background user ID
      */
     List<UmsMenu> getMenuList(@Param("adminId") Long adminId);
     /**
-     * Gets the menu based on the role ID
+     *
+     * Get the menu according to the role ID
      */
     List<UmsMenu> getMenuListByRoleId(@Param("roleId") Long roleId);
 

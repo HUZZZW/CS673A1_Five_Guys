@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * Swagger API Document-related configuration
+ * Swagger API documentation related configuration
  * Created by macro on 2018/4/26.
  */
 @Configuration
@@ -17,9 +17,9 @@ public class SwaggerConfig extends BaseSwaggerConfig {
     public SwaggerProperties swaggerProperties() {
         return SwaggerProperties.builder()
                 .apiBasePackage("com.tulingxueyuan.mall.modules")
-                .title("Turing Mall basic version of the project background management system")
-                .description("tuling_mall project back-end management interface documents")
-                .contactName("Five Guys")
+                .title("图灵商城基础版项目后台管理系统")
+                .description("tuling_mall项目后台管理接口文档")
+                .contactName("xushu")
                 .version("1.0")
                 .enableSecurity(false)
                 .build();

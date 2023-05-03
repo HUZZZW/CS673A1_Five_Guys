@@ -14,11 +14,10 @@ import java.util.List;
 
 /**
  * <p>
- * Member level table front controller
+ *
+ * Membership Tier Table Front Controller
  * </p>
  *
- * @author Five Guys
- * @since 2021-03-09
  */
 @RestController
 @RequestMapping("/memberLevel")

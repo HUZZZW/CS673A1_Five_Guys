@@ -15,8 +15,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Back-end menu management Service implementation class
- * Created by macro on 2020/2/2.
+ *
+ * Background menu management Service implementation class
  */
 @Service
 public class UmsMenuServiceImpl extends ServiceImpl<UmsMenuMapper,UmsMenu>implements UmsMenuService {
@@ -33,10 +33,10 @@ public class UmsMenuServiceImpl extends ServiceImpl<UmsMenuMapper,UmsMenu>implem
      */
     private void updateLevel(UmsMenu umsMenu) {
         if (umsMenu.getParentId() == 0) {
-            //If there is no parent menu, it is a first-level menu
+            //没有父菜单时为一级菜单
             umsMenu.setLevel(0);
         } else {
-            //If a parent menu is available, set this parameter based on the parent menu level
+            //有父菜单时选择根据父菜单level设置
             UmsMenu parentMenu = getById(umsMenu.getParentId());
             if (parentMenu != null) {
                 umsMenu.setLevel(parentMenu.getLevel() + 1);
@@ -80,7 +80,8 @@ public class UmsMenuServiceImpl extends ServiceImpl<UmsMenuMapper,UmsMenu>implem
     }
 
     /**
-     * let UmsMenu transfer to UmsMenuNode and set children property
+     *
+     * Convert UmsMenu to UmsMenuNode and set the children property
      */
     private UmsMenuNode covertMenuNode(UmsMenu menu, List<UmsMenu> menuList) {
         UmsMenuNode node = new UmsMenuNode();

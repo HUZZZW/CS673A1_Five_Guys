@@ -7,16 +7,16 @@ import lombok.EqualsAndHashCode;
 import javax.validation.constraints.NotEmpty;
 
 /**
- * User login parameter
- * Created by macro on 2018/4/26.
+ *
+ * User login parameters
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class UmsAdminLoginParam {
     @NotEmpty
-    @ApiModelProperty(value = "username",required = true)
+    @ApiModelProperty(value = "用户名",required = true)
     private String username;
     @NotEmpty
-    @ApiModelProperty(value = "password",required = true)
+    @ApiModelProperty(value = "密码",required = true)
     private String password;
 }

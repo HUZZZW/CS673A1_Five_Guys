@@ -5,11 +5,10 @@ import com.tulingxueyuan.mall.modules.ums.model.UmsRoleResourceRelation;
 
 /**
  * <p>
- * Back-end role resource relationship table Mapper interface
+ *
+ * Background role resource relationship table Mapper interface
  * </p>
  *
- * @author macro
- * @since 2020-08-21
  */
 public interface UmsRoleResourceRelationMapper extends BaseMapper<UmsRoleResourceRelation> {
 

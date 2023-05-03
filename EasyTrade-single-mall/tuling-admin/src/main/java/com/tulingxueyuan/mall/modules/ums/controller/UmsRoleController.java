@@ -16,17 +16,16 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * Back-end user role management
- * Created by macro on 2018/9/30.
+ * Background user role management
  */
 @Controller
-@Api(tags = "UmsRoleController", description = "Back-end user role management")
+@Api(tags = "UmsRoleController", description = "后台用户角色管理")
 @RequestMapping("/role")
 public class UmsRoleController {
     @Autowired
     private UmsRoleService roleService;
 
-    @ApiOperation("Add a role")
+    @ApiOperation("添加角色")
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     @ResponseBody
     public CommonResult create(@RequestBody UmsRole role) {
@@ -37,7 +36,7 @@ public class UmsRoleController {
         return CommonResult.failed();
     }
 
-    @ApiOperation("Modify the role")
+    @ApiOperation("修改角色")
     @RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
     @ResponseBody
     public CommonResult update(@PathVariable Long id, @RequestBody UmsRole role) {
@@ -49,7 +48,7 @@ public class UmsRoleController {
         return CommonResult.failed();
     }
 
-    @ApiOperation("Batch deleting roles")
+    @ApiOperation("批量删除角色")
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
     @ResponseBody
     public CommonResult delete(@RequestParam("ids") List<Long> ids) {
@@ -61,7 +60,7 @@ public class UmsRoleController {
     }
 
 
-    @ApiOperation("Get all roles")
+    @ApiOperation("获取所有角色")
     @RequestMapping(value = "/listAll", method = RequestMethod.GET)
     @ResponseBody
     public CommonResult<List<UmsRole>> listAll() {
@@ -69,7 +68,7 @@ public class UmsRoleController {
         return CommonResult.success(roleList);
     }
 
-    @ApiOperation("Paging gets a list of roles based on their name")
+    @ApiOperation("根据角色名称分页获取角色列表")
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     @ResponseBody
     public CommonResult<CommonPage<UmsRole>> list(@RequestParam(value = "keyword", required = false) String keyword,
@@ -79,7 +78,7 @@ public class UmsRoleController {
         return CommonResult.success(CommonPage.restPage(roleList));
     }
 
-    @ApiOperation("Modifying role status")
+    @ApiOperation("修改角色状态")
     @RequestMapping(value = "/updateStatus/{id}", method = RequestMethod.POST)
     @ResponseBody
     public CommonResult updateStatus(@PathVariable Long id, @RequestParam(value = "status") Integer status) {
@@ -93,7 +92,7 @@ public class UmsRoleController {
         return CommonResult.failed();
     }
 
-    @ApiOperation("Gets the role-related menu")
+    @ApiOperation("获取角色相关菜单")
     @RequestMapping(value = "/listMenu/{roleId}", method = RequestMethod.GET)
     @ResponseBody
     public CommonResult<List<UmsMenu>> listMenu(@PathVariable Long roleId) {
@@ -101,7 +100,7 @@ public class UmsRoleController {
         return CommonResult.success(roleList);
     }
 
-    @ApiOperation("Obtain role-related resources")
+    @ApiOperation("获取角色相关资源")
     @RequestMapping(value = "/listResource/{roleId}", method = RequestMethod.GET)
     @ResponseBody
     public CommonResult<List<UmsResource>> listResource(@PathVariable Long roleId) {
@@ -109,7 +108,7 @@ public class UmsRoleController {
         return CommonResult.success(roleList);
     }
 
-    @ApiOperation("Assign menus to roles")
+    @ApiOperation("给角色分配菜单")
     @RequestMapping(value = "/allocMenu", method = RequestMethod.POST)
     @ResponseBody
     public CommonResult allocMenu(@RequestParam Long roleId, @RequestParam List<Long> menuIds) {
@@ -117,7 +116,7 @@ public class UmsRoleController {
         return CommonResult.success(count);
     }
 
-    @ApiOperation("Allocate resources to roles")
+    @ApiOperation("给角色分配资源")
     @RequestMapping(value = "/allocResource", method = RequestMethod.POST)
     @ResponseBody
     public CommonResult allocResource(@RequestParam Long roleId, @RequestParam List<Long> resourceIds) {

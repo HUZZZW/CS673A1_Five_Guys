@@ -10,22 +10,25 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 /**
- * Back-end role management Service
- * Created by macro on 2018/9/30.
+ *
+ * Background role management Service
  */
 public interface UmsRoleService extends IService<UmsRole> {
     /**
-     * Adding a role
+     *
+     * add role
      */
     boolean create(UmsRole role);
 
     /**
-     * Deleting roles in bulk
+     *
+     * Batch delete roles
      */
     boolean delete(List<Long> ids);
 
     /**
-     * Paginate to get a list of roles
+     *
+     * Paging to get the list of roles
      */
     Page<UmsRole> list(String keyword, Integer pageSize, Integer pageNum);
 
@@ -35,23 +38,25 @@ public interface UmsRoleService extends IService<UmsRole> {
     List<UmsMenu> getMenuList(Long adminId);
 
     /**
-     * Get the role related menu
+     * Get role related menu
      */
     List<UmsMenu> listMenu(Long roleId);
 
     /**
-     * Access resources related to roles
+     * Get role-related resources
      */
     List<UmsResource> listResource(Long roleId);
 
     /**
-     * Assign menus to roles
+     *
+     * assign role menu
      */
     @Transactional
     int allocMenu(Long roleId, List<Long> menuIds);
 
     /**
-     * Allocate resources to roles
+     *
+     * Assign resources to roles
      */
     @Transactional
     int allocResource(Long roleId, List<Long> resourceIds);

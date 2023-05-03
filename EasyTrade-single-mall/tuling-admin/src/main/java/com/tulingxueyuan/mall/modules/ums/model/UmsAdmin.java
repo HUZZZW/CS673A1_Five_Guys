@@ -13,16 +13,15 @@ import java.util.Date;
 
 /**
  * <p>
- * Back-end user table
+ *
+ * Background user table
  * </p>
  *
- * @author macro
- * @since 2020-08-21
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @TableName("ums_admin")
-@ApiModel(value="UmsAdmin object", description="back-end user table")
+@ApiModel(value="UmsAdmin对象", description="后台用户表")
 public class UmsAdmin implements Serializable {
 
     private static final long serialVersionUID=1L;
@@ -34,25 +33,25 @@ public class UmsAdmin implements Serializable {
 
     private String password;
 
-    @ApiModelProperty(value = "head portrait")
+    @ApiModelProperty(value = "头像")
     private String icon;
 
-    @ApiModelProperty(value = "email")
+    @ApiModelProperty(value = "邮箱")
     private String email;
 
-    @ApiModelProperty(value = "nickname")
+    @ApiModelProperty(value = "昵称")
     private String nickName;
 
-    @ApiModelProperty(value = "note")
+    @ApiModelProperty(value = "备注信息")
     private String note;
 
-    @ApiModelProperty(value = "creation time")
+    @ApiModelProperty(value = "创建时间")
     private Date createTime;
 
-    @ApiModelProperty(value = "private Date lastlogintime")
+    @ApiModelProperty(value = "最后登录时间")
     private Date loginTime;
 
-    @ApiModelProperty(value = "Account status: 0-> Disabled. 1-> Enable")
+    @ApiModelProperty(value = "帐号启用状态：0->禁用；1->启用")
     private Integer status;
 
 

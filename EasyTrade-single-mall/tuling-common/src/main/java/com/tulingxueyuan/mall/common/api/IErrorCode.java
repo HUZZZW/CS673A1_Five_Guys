@@ -1,8 +1,8 @@
 package com.tulingxueyuan.mall.common.api;
 
 /**
- * Error code for the wrapper API
- * Created by macro on 2019/4/19.
+ *
+ * The error code of the encapsulation API
  */
 public interface IErrorCode {
     long getCode();

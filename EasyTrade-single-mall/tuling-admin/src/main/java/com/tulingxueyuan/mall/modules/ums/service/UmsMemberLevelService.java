@@ -7,10 +7,9 @@ import java.util.List;
 
 /**
  * <p>
- * Membership Level Table Service category
+ * Membership Level Table Service Category
  * </p>
  *
- * @since 2021-03-09
  */
 public interface UmsMemberLevelService extends IService<UmsMemberLevel> {
 

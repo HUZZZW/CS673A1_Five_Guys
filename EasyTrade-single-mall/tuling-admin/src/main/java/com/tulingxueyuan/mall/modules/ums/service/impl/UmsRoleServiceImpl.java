@@ -21,8 +21,8 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Back-end role management Service implementation class
- * Created by macro on 2018/9/30.
+ *
+ * Background role management Service implementation class
  */
 @Service
 public class UmsRoleServiceImpl extends ServiceImpl<UmsRoleMapper, UmsRole>implements UmsRoleService {
@@ -83,7 +83,7 @@ public class UmsRoleServiceImpl extends ServiceImpl<UmsRoleMapper, UmsRole>imple
         QueryWrapper<UmsRoleMenuRelation> wrapper = new QueryWrapper<>();
         wrapper.lambda().eq(UmsRoleMenuRelation::getRoleId,roleId);
         roleMenuRelationService.remove(wrapper);
-        //Insert new relationships in batches
+        //Bulk insert new relations
         List<UmsRoleMenuRelation> relationList = new ArrayList<>();
         for (Long menuId : menuIds) {
             UmsRoleMenuRelation relation = new UmsRoleMenuRelation();
@@ -101,7 +101,7 @@ public class UmsRoleServiceImpl extends ServiceImpl<UmsRoleMapper, UmsRole>imple
         QueryWrapper<UmsRoleResourceRelation> wrapper = new QueryWrapper<>();
         wrapper.lambda().eq(UmsRoleResourceRelation::getRoleId,roleId);
         roleResourceRelationService.remove(wrapper);
-        //Insert new relationships in batches
+        //Bulk insert new relations
         List<UmsRoleResourceRelation> relationList = new ArrayList<>();
         for (Long resourceId : resourceIds) {
             UmsRoleResourceRelation relation = new UmsRoleResourceRelation();

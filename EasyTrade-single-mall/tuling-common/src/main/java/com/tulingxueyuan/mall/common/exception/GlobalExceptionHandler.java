@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 
 /**
- * Global exception handling
- * Created by macro on 2020/2/27.
+ *
+ * global exception handling
  */
 @ControllerAdvice
 public class GlobalExceptionHandler {
