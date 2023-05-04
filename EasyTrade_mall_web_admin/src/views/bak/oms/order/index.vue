@@ -162,17 +162,17 @@
     <el-dialog
       title="Close Order"
       :visible.sync="closeOrder.dialogVisible" width="30%">
-      <span style="vertical-align: top">操作备注：</span>
+      <span style="vertical-align: top">Operation Notes:</span>
       <el-input
         style="width: 80%"
         type="textarea"
         :rows="5"
-        placeholder="请输入内容"
+        placeholder="Please type in contents"
         v-model="closeOrder.content">
       </el-input>
       <span slot="footer" class="dialog-footer">
-        <el-button @click="closeOrder.dialogVisible = false">取 消</el-button>
-        <el-button type="primary" @click="handleCloseOrderConfirm">确 定</el-button>
+        <el-button @click="closeOrder.dialogVisible = false">Cancel</el-button>
+        <el-button type="primary" @click="handleCloseOrderConfirm">Confirm</el-button>
       </span>
     </el-dialog>
     <logistics-dialog v-model="logisticsDialogVisible"></logistics-dialog>
@@ -277,33 +277,33 @@
       },
       formatPayType(value) {
         if (value === 1) {
-          return '支付宝';
+          return 'Alipay';
         } else if (value === 2) {
-          return '微信';
+          return 'Wechat';
         } else {
-          return '未支付';
+          return 'Unpaid';
         }
       },
       formatSourceType(value) {
         if (value === 1) {
-          return 'APP订单';
+          return 'APP';
         } else {
-          return 'PC订单';
+          return 'PC';
         }
       },
       formatStatus(value) {
         if (value === 1) {
-          return '待发货';
+          return 'Waiting for shipping';
         } else if (value === 2) {
-          return '已发货';
+          return 'Shipped';
         } else if (value === 3) {
-          return '已完成';
+          return 'Finished';
         } else if (value === 4) {
-          return '已关闭';
+          return 'Closed';
         } else if (value === 5) {
-          return '无效订单';
+          return 'Invalid order';
         } else {
-          return '待付款';
+          return 'Waiting for payment';
         }
       },
     },
@@ -356,7 +356,7 @@
           }
           if(list.length===0){
             this.$message({
-              message: '选中订单中没有可以发货的订单',
+              message: 'No order choosed need shipping',
               type: 'warning',
               duration: 1000
             });
@@ -391,7 +391,7 @@
       handleCloseOrderConfirm() {
         if (this.closeOrder.content == null || this.closeOrder.content === '') {
           this.$message({
-            message: '操作备注不能为空',
+            message: 'Operation note can not be empty',
             type: 'warning',
             duration: 1000
           });
@@ -405,7 +405,7 @@
           this.closeOrder.dialogVisible=false;
           this.getList();
           this.$message({
-            message: '修改成功',
+            message: 'Edition success',
             type: 'success',
             duration: 1000
           });
@@ -420,16 +420,16 @@
         });
       },
       deleteOrder(ids){
-        this.$confirm('是否要进行该删除操作?', '提示', {
-          confirmButtonText: '确定',
-          cancelButtonText: '取消',
+        this.$confirm('Confirm deletion?', 'Notice', {
+          confirmButtonText: 'Confirm',
+          cancelButtonText: 'Cancel',
           type: 'warning'
         }).then(() => {
           let params = new URLSearchParams();
           params.append("ids",ids);
           deleteOrder(params).then(response=>{
             this.$message({
-              message: '删除成功！',
+              message: 'Delete success',
               type: 'success',
               duration: 1000
             });

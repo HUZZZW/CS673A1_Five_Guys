@@ -133,11 +133,11 @@
         <el-table-column label="Order" width="100" align="center">
           <template slot-scope="scope">{{scope.row.sort}}</template>
         </el-table-column>
-        <el-table-column label="SKU" width="100" align="center">
+        <!-- <el-table-column label="SKU" width="100" align="center">
           <template slot-scope="scope">
             <el-button type="primary" icon="el-icon-edit" @click="handleShowSkuEditDialog(scope.$index, scope.row)" circle></el-button>
           </template>
-        </el-table-column>
+        </el-table-column>-->
         <el-table-column label="Sales" width="100" align="center">
           <template slot-scope="scope">{{scope.row.sale}}</template>
         </el-table-column>

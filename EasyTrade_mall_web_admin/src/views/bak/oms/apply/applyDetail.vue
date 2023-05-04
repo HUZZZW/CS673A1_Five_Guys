@@ -1,46 +1,46 @@
 <template>
   <div class="detail-container">
     <el-card shadow="never">
-      <span class="font-title-medium">退货商品</span>
+      <span class="font-title-medium">Return Product</span>
       <el-table
         border
         class="standard-margin"
         ref="productTable"
         :data="productList">
-        <el-table-column label="商品图片" width="160" align="center">
+        <el-table-column label="Picture" width="160" align="center">
           <template slot-scope="scope">
             <img style="height:80px" :src="scope.row.productPic">
           </template>
         </el-table-column>
-        <el-table-column label="商品名称" align="center">
+        <el-table-column label="Name" align="center">
           <template slot-scope="scope">
             <span class="font-small">{{scope.row.productName}}</span><br>
-            <span class="font-small">品牌：{{scope.row.productBrand}}</span>
+            <span class="font-small">Brand：{{scope.row.productBrand}}</span>
           </template>
         </el-table-column>
-        <el-table-column label="价格/货号" width="180" align="center">
+        <el-table-column label="Price/ID" width="180" align="center">
           <template slot-scope="scope">
-            <span class="font-small">价格：￥{{scope.row.productRealPrice}}</span><br>
-            <span class="font-small">货号：NO.{{scope.row.productId}}</span>
+            <span class="font-small">Price:{{scope.row.productRealPrice}}</span><br>
+            <span class="font-small">ID：NO.{{scope.row.productId}}</span>
           </template>
         </el-table-column>
-        <el-table-column label="属性" width="180" align="center">
+        <el-table-column label="Product Attribute" width="180" align="center">
           <template slot-scope="scope">{{scope.row.productAttr}}</template>
         </el-table-column>
-        <el-table-column label="数量" width="100" align="center">
+        <el-table-column label="Count" width="100" align="center">
           <template slot-scope="scope">{{scope.row.productCount}}</template>
         </el-table-column>
-        <el-table-column label="小计" width="100" align="center">
+        <el-table-column label="Amount" width="100" align="center">
           <template slot-scope="scope">￥{{totalAmount}}</template>
         </el-table-column>
       </el-table>
       <div style="float:right;margin-top:15px;margin-bottom:15px">
-        <span class="font-title-medium">合计：</span>
+        <span class="font-title-medium">Amount:</span>
         <span class="font-title-medium color-danger">￥{{totalAmount}}</span>
       </div>
     </el-card>
     <el-card shadow="never" class="standard-margin">
-      <span class="font-title-medium">服务单信息</span>
+      <span class="font-title-medium">Service Info</span>
       <div class="form-container-border">
         <el-row>
           <el-col :span="6" class="form-border form-left-bg font-small">服务单号</el-col>

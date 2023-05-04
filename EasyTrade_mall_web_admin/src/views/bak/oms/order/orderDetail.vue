@@ -2,11 +2,11 @@
   <div class="detail-container">
     <div>
       <el-steps :active="formatStepStatus(order.status)" finish-status="success" align-center>
-        <el-step title="提交订单" :description="formatTime(order.createTime)"></el-step>
-        <el-step title="支付订单" :description="formatTime(order.paymentTime)"></el-step>
-        <el-step title="平台发货" :description="formatTime(order.deliveryTime)"></el-step>
-        <el-step title="确认收货" :description="formatTime(order.receiveTime)"></el-step>
-        <el-step title="完成评价" :description="formatTime(order.commentTime)"></el-step>
+        <el-step title="Submit order" :description="formatTime(order.createTime)"></el-step>
+        <el-step title="Pay" :description="formatTime(order.paymentTime)"></el-step>
+        <el-step title="Shipment" :description="formatTime(order.deliveryTime)"></el-step>
+        <el-step title="Delivery" :description="formatTime(order.receiveTime)"></el-step>
+        <el-step title="Comment" :description="formatTime(order.commentTime)"></el-step>
       </el-steps>
     </div>
     <el-card shadow="never" style="margin-top: 15px">
@@ -14,54 +14,54 @@
         <i class="el-icon-warning color-danger" style="margin-left: 20px"></i>
         <span class="color-danger">当前订单状态：{{order.status | formatStatus}}</span>
         <div class="operate-button-container" v-show="order.status===0">
-          <el-button size="mini" @click="showUpdateReceiverDialog">修改收货人信息</el-button>
-          <el-button size="mini">修改商品信息</el-button>
-          <el-button size="mini" @click="showUpdateMoneyDialog">修改费用信息</el-button>
-          <el-button size="mini" @click="showMessageDialog">发送站内信</el-button>
-          <el-button size="mini" @click="showCloseOrderDialog">关闭订单</el-button>
-          <el-button size="mini" @click="showMarkOrderDialog">备注订单</el-button>
+          <el-button size="mini" @click="showUpdateReceiverDialog">Edit Receiver</el-button>
+          <el-button size="mini">Edit Product</el-button>
+          <el-button size="mini" @click="showUpdateMoneyDialog">Edit Payment</el-button>
+          <el-button size="mini" @click="showMessageDialog">Send message</el-button>
+          <el-button size="mini" @click="showCloseOrderDialog">Close order</el-button>
+          <el-button size="mini" @click="showMarkOrderDialog">Order Note</el-button>
         </div>
         <div class="operate-button-container" v-show="order.status===1">
-          <el-button size="mini" @click="showUpdateReceiverDialog">修改收货人信息</el-button>
-          <el-button size="mini" @click="showMessageDialog">发送站内信</el-button>
-          <el-button size="mini">取消订单</el-button>
-          <el-button size="mini" @click="showMarkOrderDialog">备注订单</el-button>
+          <el-button size="mini" @click="showUpdateReceiverDialog">Edit Receiver</el-button>
+          <el-button size="mini" @click="showMessageDialog">Send message</el-button>
+          <el-button size="mini">Cancel Order</el-button>
+          <el-button size="mini" @click="showMarkOrderDialog">Order Note</el-button>
         </div>
         <div class="operate-button-container" v-show="order.status===2||order.status===3">
-          <el-button size="mini" @click="showLogisticsDialog">订单跟踪</el-button>
-          <el-button size="mini" @click="showMessageDialog">发送站内信</el-button>
-          <el-button size="mini" @click="showMarkOrderDialog">备注订单</el-button>
+          <el-button size="mini" @click="showLogisticsDialog">Track order</el-button>
+          <el-button size="mini" @click="showMessageDialog">Send message</el-button>
+          <el-button size="mini" @click="showMarkOrderDialog">Order Note</el-button>
         </div>
         <div class="operate-button-container" v-show="order.status===4">
-          <el-button size="mini" @click="handleDeleteOrder">删除订单</el-button>
-          <el-button size="mini" @click="showMarkOrderDialog">备注订单</el-button>
+          <el-button size="mini" @click="handleDeleteOrder">Delete order</el-button>
+          <el-button size="mini" @click="showMarkOrderDialog">Order Note</el-button>
         </div>
       </div>
       <div style="margin-top: 20px">
         <svg-icon icon-class="marker" style="color: #606266"></svg-icon>
-        <span class="font-small">基本信息</span>
+        <span class="font-small">Basic Information</span>
       </div>
       <div class="table-layout">
         <el-row>
-          <el-col :span="4" class="table-cell-title">订单编号</el-col>
-          <el-col :span="4" class="table-cell-title">发货单流水号</el-col>
-          <el-col :span="4" class="table-cell-title">用户账号</el-col>
-          <el-col :span="4" class="table-cell-title">支付方式</el-col>
-          <el-col :span="4" class="table-cell-title">订单来源</el-col>
-          <el-col :span="4" class="table-cell-title">订单类型</el-col>
+          <el-col :span="4" class="table-cell-title">Order ID</el-col>
+          <el-col :span="4" class="table-cell-title">Shipment ID</el-col>
+          <el-col :span="4" class="table-cell-title">User account</el-col>
+          <el-col :span="4" class="table-cell-title">Payment</el-col>
+          <el-col :span="4" class="table-cell-title">Source</el-col>
+          <el-col :span="4" class="table-cell-title">Order type</el-col>
         </el-row>
         <el-row>
           <el-col :span="4" class="table-cell">{{order.orderSn}}</el-col>
-          <el-col :span="4" class="table-cell">暂无</el-col>
+          <el-col :span="4" class="table-cell">None</el-col>
           <el-col :span="4" class="table-cell">{{order.memberUsername}}</el-col>
           <el-col :span="4" class="table-cell">{{order.payType | formatPayType}}</el-col>
           <el-col :span="4" class="table-cell">{{order.sourceType | formatSourceType}}</el-col>
           <el-col :span="4" class="table-cell">{{order.orderType | formatOrderType}}</el-col>
         </el-row>
         <el-row>
-          <el-col :span="4" class="table-cell-title">配送方式</el-col>
-          <el-col :span="4" class="table-cell-title">物流单号</el-col>
-          <el-col :span="4" class="table-cell-title">自动确认收货时间</el-col>
+          <el-col :span="4" class="table-cell-title">Delivery Way</el-col>
+          <el-col :span="4" class="table-cell-title">Shipment ID</el-col>
+          <el-col :span="4" class="table-cell-title">Automatic Confirmation</el-col>
           <el-col :span="4" class="table-cell-title">订单可得优币</el-col>
           <el-col :span="4" class="table-cell-title">订单可得成长值</el-col>
           <el-col :span="4" class="table-cell-title">活动信息</el-col>
@@ -69,13 +69,13 @@
         <el-row>
           <el-col :span="4" class="table-cell">{{order.deliveryCompany | formatNull}}</el-col>
           <el-col :span="4" class="table-cell">{{order.deliverySn | formatNull}}</el-col>
-          <el-col :span="4" class="table-cell">{{order.autoConfirmDay}}天</el-col>
+          <el-col :span="4" class="table-cell">{{order.autoConfirmDay}}Day</el-col>
           <el-col :span="4" class="table-cell">{{order.integration}}</el-col>
           <el-col :span="4" class="table-cell">{{order.growth}}</el-col>
           <el-col :span="4" class="table-cell">
             <el-popover
               placement="top-start"
-              title="活动信息"
+              title="Promotion Info"
               width="200"
               trigger="hover"
               :content="order.promotionInfo">

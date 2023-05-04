@@ -84,15 +84,15 @@
       confirm(formName){
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            this.$confirm('是否要提交修改?', '提示', {
-              confirmButtonText: '确定',
-              cancelButtonText: '取消',
+            this.$confirm('Confirm Edit?', 'Notice', {
+              confirmButtonText: 'Confirm',
+              cancelButtonText: 'Cancel',
               type: 'warning'
             }).then(() => {
               updateOrderSetting(1,this.orderSetting).then(response=>{
                 this.$message({
                   type: 'success',
-                  message: '提交成功!',
+                  message: 'Edition success!',
                   duration:1000
                 });
               })

@@ -1,5 +1,5 @@
 <template> 
-  <el-dialog title="订单跟踪"
+  <el-dialog title="Order Tracking"
              :visible.sync="visible"
              :before-close="handleClose"
              width="40%">
@@ -16,13 +16,13 @@
 </template>
 <script>
   const defaultLogisticsList=[
-    {name: '订单已提交，等待付款',time:'2017-04-01 12:00:00 '},
-    {name: '订单付款成功',time:'2017-04-01 12:00:00 '},
-    {name: '在北京市进行下级地点扫描，等待付款',time:'2017-04-01 12:00:00 '},
-    {name: '在分拨中心广东深圳公司进行卸车扫描，等待付款',time:'2017-04-01 12:00:00 '},
-    {name: '在广东深圳公司进行发出扫描',time:'2017-04-01 12:00:00 '},
-    {name: '到达目的地网点广东深圳公司，快件将很快进行派送',time:'2017-04-01 12:00:00 '},
-    {name: '订单已签收，期待再次为您服务',time:'2017-04-01 12:00:00 '}
+    {name: 'Waiting for payment',time:'2017-04-01 12:00:00 '},
+    {name: 'Payment success',time:'2017-04-01 12:00:00 '},
+    {name: 'Arrived Beijing',time:'2017-04-01 12:00:00 '},
+    {name: 'Arrived Guangdong, waiting for scan',time:'2017-04-01 12:00:00 '},
+    {name: 'Departed from Guangdong',time:'2017-04-01 12:00:00 '},
+    {name: 'Out for delivery',time:'2017-04-01 12:00:00 '},
+    {name: 'Delivered',time:'2017-04-01 12:00:00 '}
   ];
   export default {
     name:'logisticsDialog',
